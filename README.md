@@ -1,4 +1,4 @@
-# 💻 Portfolio Personal — Jorge Fuentes Aguilar
+# Portfolio Personal — Jorge Fuentes Aguilar
 
 Bienvenido a mi portfolio personal como estudiante de **Desarrollo de Aplicaciones Multiplataforma (DAM)**. 
 
@@ -6,7 +6,7 @@ Un espacio con diseño minimalista en modo oscuro estilo terminal/dev, enfocado 
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - **Frontend:** HTML5, CSS3, JavaScript (ES6+).
 - **Formularios:** Integración con Formspree.
@@ -15,7 +15,7 @@ Un espacio con diseño minimalista en modo oscuro estilo terminal/dev, enfocado 
 
 ---
 
-## 📂 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```text
 portfolioWeb/
