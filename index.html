@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jorge Fuentes Aguilar · Estudiante de DAM</title>
+  <meta name="description" content="Portfolio de Jorge Fuentes Aguilar, estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM). Código limpio, bases de datos y proyectos en Java, SQL y desarrollo web.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0b0f14">
+  <link rel="stylesheet" href="style/style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Cabecera -->
+  <header class="hero">
+    <div class="container">
+      <p class="hero__prompt" aria-hidden="true"><span>~ $</span> whoami</p>
+      <h1 class="hero__name">Jorge Fuentes Aguilar</h1>
+      <p class="hero__subtitle">Estudiante de Desarrollo de Aplicaciones Multiplataforma - DAM</p>
+      <p class="hero__intro">
+        Desarrollo aplicaciones de escritorio y web con foco en el código limpio y en las bases de datos bien estructuradas.
+        Me gusta que las soluciones sean simples, legibles y fáciles de mantener.
+      </p>
+
+      <nav class="hero__links" aria-label="Enlaces principales">
+        <a class="btn" href="https://github.com/jorgefuentess9" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        <a class="btn" href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Proyectos -->
+    <section class="container section" aria-labelledby="proyectos-titulo">
+      <h2 class="section__title" id="proyectos-titulo"><span aria-hidden="true">~/</span>proyectos</h2>
+
+      <div class="projects">
+
+        <article class="project">
+          <p class="project__kind">web</p>
+          <h3 class="project__title">ViDuke Club</h3>
+          <p class="project__desc">
+            Web de alquiler de videojuegos construida con HTML, CSS y JavaScript,
+            con una interfaz clara y la lógica en el lado cliente.
+          </p>
+          <ul class="tags" role="list" aria-label="Tecnologías">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+          </ul>
+          <a class="project__link" href="https://github.com/jorgefuentess9" target="_blank" rel="noopener noreferrer" aria-label="Ver en GitHub: ViDuke Club">Ver en GitHub ↗</a>
+        </article>
+
+        <article class="project">
+          <p class="project__kind">escritorio</p>
+          <h3 class="project__title">E-Commerce &amp; Control de Stock</h3>
+          <p class="project__desc">
+            Aplicación de escritorio en Java Swing para gestionar un comercio y su inventario.
+            Arquitectura MVC y persistencia en MariaDB mediante JDBC.
+          </p>
+          <ul class="tags" role="list" aria-label="Tecnologías">
+            <li>Java Swing</li>
+            <li>MVC</li>
+            <li>MariaDB</li>
+            <li>JDBC</li>
+          </ul>
+          <a class="project__link" href="https://github.com/jorgefuentess9/ecommerce-java-db" target="_blank" rel="noopener noreferrer" aria-label="Ver en GitHub: E-Commerce y Control de Stock">Ver en GitHub ↗</a>
+        </article>
+
+        <article class="project">
+          <p class="project__kind">base de datos</p>
+          <h3 class="project__title">Milfshakes</h3>
+          <p class="project__desc">
+            Modelo relacional diseñado sobre PostgreSQL, con el entorno de base de datos
+            en contenedores Docker para poder reproducirlo en cualquier máquina.
+          </p>
+          <ul class="tags" role="list" aria-label="Tecnologías">
+            <li>PostgreSQL</li>
+            <li>Docker</li>
+          </ul>
+          <a class="project__link" href="https://github.com/jorgefuentess9" target="_blank" rel="noopener noreferrer" aria-label="Ver en GitHub: Milfshakes">Ver en GitHub ↗</a>
+        </article>
+
+        <!-- En desarrollo: el enlace no navega, script.js muestra el aviso de data-notice -->
+        <article class="project">
+          <div class="project__header">
+            <p class="project__kind">proyecto personal</p>
+            <span class="badge badge--warning">En desarrollo</span>
+          </div>
+          <h3 class="project__title">DataGame</h3>
+          <p class="project__desc">
+            Plataforma web de valoraciones y reseñas de videojuegos.
+            Diseño de arquitectura de software y modelo relacional en PostgreSQL.
+          </p>
+          <ul class="tags" role="list" aria-label="Tecnologías">
+            <li>PostgreSQL</li>
+            <li>Base de Datos</li>
+            <li>Web</li>
+          </ul>
+          <a class="project__link"
+             href="#"
+             data-notice="⚡ Proyecto en desarrollo: Actualmente estoy diseñando la arquitectura de datos y la interfaz de DataGame. ¡Estará disponible pronto!"
+             data-notice-title="~/datagame"
+             aria-label="Ver proyecto: DataGame">Ver proyecto ↗</a>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">&copy; 2026 Jorge Fuentes Aguilar. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto · Jorge Fuentes Aguilar</title>
+  <meta name="description" content="Contacta con Jorge Fuentes Aguilar, estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM).">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0b0f14">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+  <main class="page">
+    <div class="container container--narrow">
+
+      <a class="back-link" href="index.html"><span aria-hidden="true">←</span> Volver al inicio</a>
+
+      <h1 class="page-title"><span aria-hidden="true">~/</span>contacto</h1>
+      <p class="page-intro">
+        ¿Tienes una propuesta, una duda o quieres saber más sobre mis proyectos?
+        Escríbeme y te responderé lo antes posible. Todos los campos son obligatorios.
+      </p>
+
+      <!-- Formulario conectado a Formspree -->
+      <form class="form" action="https://formspree.io/f/xrpekqzq" method="POST">
+
+        <div class="field">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="name" autocomplete="name" required>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="_replyto" autocomplete="email" placeholder="tu@correo.com" required>
+        </div>
+
+        <div class="field">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="message" rows="6" placeholder="Cuéntame en qué puedo ayudarte…" required></textarea>
+        </div>
+
+        <button class="btn btn--primary" type="submit">Enviar mensaje <span aria-hidden="true">↗</span></button>
+
+      </form>
+
+    </div>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <div class="container container--narrow">
+      <p class="footer__text">&copy; 2026 Jorge Fuentes Aguilar. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
