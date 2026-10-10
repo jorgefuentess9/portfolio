@@ -22,7 +22,7 @@ portfolioWeb/
 ├── index.html       # Página principal con presentación y proyectos
 ├── contacto.html    # Formulario de contacto independiente
 ├── css/
-│   └── style.css    # Estilos globales (Modo oscuro / Terminal)
+│   └── style.css    # Estilos globales 
 ├── js/
 │   └── script.js    # Interactividad y alertas para proyectos en desarrollo
 └── README.md        # Documentación del repositorio
