@@ -200,7 +200,7 @@ a {
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.45rem;
+  gap: 0.5rem;
   list-style: none;
   padding: 0;
 }
@@ -208,11 +208,17 @@ a {
 .tag-item {
   font-family: var(--font-mono);
   font-size: 0.78rem;
-  padding: 0.2rem 0.6rem;
+  padding: 0.25rem 0.65rem;
   border-radius: 4px;
   background: var(--surface-alt);
   border: 1px solid var(--border);
-  color: var(--text-soft);
+  color: var(--accent);
+  transition: all 0.2s ease;
+}
+
+.project-card:hover .tag-item,
+.skill-category-card:hover .tag-item {
+  border-color: var(--accent-border);
 }
 
 .badge {

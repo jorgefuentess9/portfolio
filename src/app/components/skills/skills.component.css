@@ -7,26 +7,38 @@
 .skill-category-card {
   background: var(--surface);
   border: 1px solid var(--border);
+  border-left: 3px solid transparent;
   border-radius: var(--radius);
   padding: 1.6rem 1.6rem 1.5rem;
   display: flex;
   flex-direction: column;
-  transition: border-color 0.2s ease;
+  position: relative;
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+              border-color 0.25s ease,
+              box-shadow 0.25s ease;
 }
 
+/* Efecto de saltito y resalte verde idéntico */
 .skill-category-card:hover {
+  transform: translateY(-5px);
   border-color: var(--accent-border);
+  border-left: 3px solid var(--accent);
+  box-shadow: 0 10px 28px -5px rgba(0, 0, 0, 0.4),
+              0 0 15px rgba(63, 185, 80, 0.08);
 }
 
 .skill-kind {
   font-family: var(--font-mono);
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  margin-bottom: 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 0.9rem;
 }
 
 .category-title {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: var(--text);
   margin-bottom: 1.3rem;
