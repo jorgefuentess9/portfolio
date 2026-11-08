@@ -64,38 +64,38 @@ export class PortfolioStateService {
         inProgressBadge: 'En desarrollo',
         items: [
           {
-            id: 'milfshakes',
-            kind: 'base de datos & devops',
-            title: 'Milfshakes',
-            desc: 'Modelo relacional avanzado diseñado sobre PostgreSQL, desplegado con entornos automatizados en contenedores Docker para garantizar reproducibilidad en cualquier entorno.',
-            tags: ['PostgreSQL', 'Docker', 'SQL DDL/DML', 'Modelado Relacional'],
-            link: 'https://github.com/jorgefuentess9/m-shakes'
+            id: 'viduke-club',
+            kind: 'web',
+            title: 'ViDuke Club',
+            desc: 'Web de alquiler de videojuegos construida con HTML, CSS y JavaScript, con una interfaz clara y la lógica en el lado cliente.',
+            tags: ['HTML', 'CSS', 'JS'],
+            link: 'https://github.com/jorgefuentess9/viduke-club'
           },
           {
             id: 'ecommerce-java',
-            kind: 'escritorio & persistencia',
+            kind: 'escritorio',
             title: 'E-Commerce & Control de Stock',
-            desc: 'Aplicación de escritorio en Java para gestión de comercio minorista, control de inventario y facturación. Diseñada bajo patrón MVC con persistencia en MariaDB y MySQL mediante JDBC optimizado.',
-            tags: ['Java', 'MariaDB', 'MySQL', 'JDBC', 'MVC', 'Swing'],
+            desc: 'Aplicación de escritorio en Java Swing para gestionar un comercio y su inventario. Arquitectura MVC y persistencia en MariaDB mediante JDBC.',
+            tags: ['Java Swing', 'MVC', 'MariaDB', 'JDBC'],
             link: 'https://github.com/jorgefuentess9/ecommerce-java-db'
           },
           {
-            id: 'viduke-club',
-            kind: 'desarrollo web',
-            title: 'ViDuke Club',
-            desc: 'Plataforma web de alquiler de videojuegos construida con HTML, CSS y JavaScript nativo, implementando una arquitectura de UI limpia y reactividad cliente.',
-            tags: ['JavaScript', 'HTML5', 'CSS3', 'Arquitectura Web'],
-            link: 'https://github.com/jorgefuentess9/viduke-club'
+            id: 'milfshakes',
+            kind: 'base de datos',
+            title: 'M***shakes',
+            desc: 'Modelo relacional diseñado sobre PostgreSQL, con el entorno de base de datos en contenedores Docker para poder reproducirlo en cualquier máquina.',
+            tags: ['PostgreSQL', 'Docker'],
+            link: 'https://github.com/jorgefuentess9/m-shakes'
           },
           {
             id: 'datagame',
             kind: 'proyecto personal',
             title: 'DataGame',
-            desc: 'Plataforma web colaborativa para valoraciones y análisis de videojuegos. Enfocada en diseño arquitectónico modular y modelado relacional en PostgreSQL.',
-            tags: ['PostgreSQL', 'Modelado Relacional', 'Web API', 'Frontend'],
+            desc: 'Plataforma web de valoraciones y reseñas de videojuegos. Diseño de arquitectura de software y modelo relacional en PostgreSQL.',
+            tags: ['PostgreSQL', 'Base de Datos', 'Web'],
             link: '#',
             inProgress: true,
-            notice: '⚡ Proyecto en desarrollo: Actualmente diseñando la arquitectura de datos relacionales y API REST. ¡Pronto en GitHub!',
+            notice: '⚡ Proyecto en desarrollo: Actualmente estoy diseñando la arquitectura de datos y la interfaz de DataGame. ¡Estará disponible pronto!',
             noticeTitle: '~/datagame'
           }
         ]
@@ -134,26 +134,17 @@ export class PortfolioStateService {
             institution: 'Formación Profesional Oficial',
             period: 'En curso',
             details: [
-              'Especialización en desarrollo de software con Java, gestión de bases de datos relacionales (PostgreSQL, MariaDB, MySQL, SQLite).',
-              'Sistemas, despliegues y fundamentos de redes e ingeniería de software.'
+              'Desarrollo de software multiplataforma, bases de datos relacionales (PostgreSQL, MariaDB, MySQL, SQLite) y sistemas.',
+              'Aplicaciones de escritorio y web orientadas a buenas prácticas y código limpio.'
             ]
           },
           {
-            degree: 'Cisco Networking Academy',
+            degree: 'Introducción a la Ciberseguridad',
             institution: 'Cisco Networking Academy',
-            period: 'Certificaciones & Cursos',
+            period: 'Completado',
             details: [
-              'Conocimientos sólidos en direccionamiento IP, switching, routing, protocolos de red y configuración de infraestructuras.',
-              'Buenas prácticas en seguridad y conectividad de servidores Linux/Ubuntu.'
-            ]
-          },
-          {
-            degree: 'Especialización en Python, Linux & Contenedores',
-            institution: 'Formación continua y proyectos prácticos',
-            period: 'Desarrollo autónomo',
-            details: [
-              'Manejo de entornos Linux (Ubuntu Server) en terminal.',
-              'Contenedores Docker para bases de datos reproducibles y desarrollo de scripts en Python.'
+              'Conceptos fundamentales de seguridad en redes, defensa digital, detección de amenazas y protección de la privacidad.',
+              'Principios de seguridad aplicados a sistemas y comunicaciones.'
             ]
           }
         ]
@@ -175,7 +166,7 @@ export class PortfolioStateService {
       },
       footer: {
         rights: 'Todos los derechos reservados.',
-        designedWith: 'Construido con Angular 19+ · Clean Architecture & CSS Terminal'
+        designedWith: 'Construido con Angular 19+'
       }
     },
     en: {
@@ -203,38 +194,38 @@ export class PortfolioStateService {
         inProgressBadge: 'In development',
         items: [
           {
-            id: 'milfshakes',
-            kind: 'database & devops',
-            title: 'Milfshakes',
-            desc: 'Advanced relational schema designed on PostgreSQL, automated with Docker containers for seamless reproducibility across environments.',
-            tags: ['PostgreSQL', 'Docker', 'SQL DDL/DML', 'Relational Modeling'],
-            link: 'https://github.com/jorgefuentess9/m-shakes'
+            id: 'viduke-club',
+            kind: 'web',
+            title: 'ViDuke Club',
+            desc: 'Video game rental web platform built using HTML, CSS, and vanilla JavaScript, with a clear interface and client-side logic.',
+            tags: ['HTML', 'CSS', 'JS'],
+            link: 'https://github.com/jorgefuentess9/viduke-club'
           },
           {
             id: 'ecommerce-java',
-            kind: 'desktop & persistence',
-            title: 'E-Commerce & Stock Control',
-            desc: 'Java desktop application for retail management, inventory tracking, and billing. Built with MVC architecture and persistence in MariaDB and MySQL via JDBC.',
-            tags: ['Java', 'MariaDB', 'MySQL', 'JDBC', 'MVC', 'Swing'],
+            kind: 'desktop',
+            title: 'E-Commerce & Control de Stock',
+            desc: 'Desktop application in Java Swing for store inventory and retail management. MVC architecture and MariaDB persistence via JDBC.',
+            tags: ['Java Swing', 'MVC', 'MariaDB', 'JDBC'],
             link: 'https://github.com/jorgefuentess9/ecommerce-java-db'
           },
           {
-            id: 'viduke-club',
-            kind: 'web development',
-            title: 'ViDuke Club',
-            desc: 'Video game rental web platform built using native HTML, CSS, and vanilla JavaScript, showcasing clean UI structure and client-side reactivity.',
-            tags: ['JavaScript', 'HTML5', 'CSS3', 'Web Architecture'],
-            link: 'https://github.com/jorgefuentess9/viduke-club'
+            id: 'milfshakes',
+            kind: 'database',
+            title: 'M***shakes',
+            desc: 'Relational database schema designed in PostgreSQL, automated with Docker containers for consistent execution anywhere.',
+            tags: ['PostgreSQL', 'Docker'],
+            link: 'https://github.com/jorgefuentess9/m-shakes'
           },
           {
             id: 'datagame',
             kind: 'personal project',
             title: 'DataGame',
-            desc: 'Community platform for video game reviews and analytics. Emphasizing modular architecture and relational modeling in PostgreSQL.',
-            tags: ['PostgreSQL', 'Relational Design', 'Web API', 'Frontend'],
+            desc: 'Video game reviews and rating community platform. Software architecture design and relational modeling in PostgreSQL.',
+            tags: ['PostgreSQL', 'Database', 'Web'],
             link: '#',
             inProgress: true,
-            notice: '⚡ Project under development: Currently designing the relational schema and REST APIs. Coming soon on GitHub!',
+            notice: '⚡ Project under development: Currently designing the data architecture and interface. Coming soon!',
             noticeTitle: '~/datagame'
           }
         ]
@@ -273,26 +264,17 @@ export class PortfolioStateService {
             institution: 'Official Vocational Education',
             period: 'In progress',
             details: [
-              'Specializing in software engineering with Java, relational database design (PostgreSQL, MariaDB, MySQL, SQLite).',
-              'Operating systems, server deployments, networking fundamentals, and multiplatform software.'
+              'Multiplatform software development, relational databases (PostgreSQL, MariaDB, MySQL, SQLite), and operating systems.',
+              'Desktop and web applications focused on industry best practices and clean code.'
             ]
           },
           {
-            degree: 'Cisco Networking Academy',
+            degree: 'Introduction to Cybersecurity',
             institution: 'Cisco Networking Academy',
-            period: 'Courses & Certifications',
+            period: 'Completed',
             details: [
-              'Strong foundation in IP addressing, switching, routing, network protocols, and infrastructure topology.',
-              'Best practices in networking and secure configuration for Linux/Ubuntu server environments.'
-            ]
-          },
-          {
-            degree: 'Python, Linux & Containers Specialization',
-            institution: 'Hands-on practical development',
-            period: 'Self-driven projects',
-            details: [
-              'Command-line proficiency in Ubuntu Server / Linux environments.',
-              'Dockerized setups for isolated relational databases and automated Python utilities.'
+              'Fundamental principles of network security, digital defense, threat detection, and privacy protection.',
+              'Security concepts applied to operating systems and digital communications.'
             ]
           }
         ]
@@ -314,7 +296,7 @@ export class PortfolioStateService {
       },
       footer: {
         rights: 'All rights reserved.',
-        designedWith: 'Built with Angular 19+ · Clean Architecture & Terminal CSS'
+        designedWith: 'Built with Angular 19+'
       }
     }
   };

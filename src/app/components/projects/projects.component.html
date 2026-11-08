@@ -8,11 +8,12 @@
 
   <div class="projects-grid">
     @for (project of state.t().projects.items; track project.id) {
-      <article class="project-card" [class.is-highlighted]="project.id === 'milfshakes' || project.id === 'ecommerce-java'">
-        <div class="card-top">
-          <span class="project-kind">{{ project.kind }}</span>
+      <article class="project-card">
+        <div class="card-header-row">
+          <p class="project-kind">{{ project.kind }}</p>
           @if (project.inProgress) {
             <span class="badge badge--warning">
+              <span class="dot-warning" aria-hidden="true">•</span>
               {{ state.t().projects.inProgressBadge }}
             </span>
           }
@@ -59,4 +60,3 @@
     </div>
   }
 </section>
-
