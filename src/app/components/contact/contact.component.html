@@ -10,7 +10,7 @@
     {{ state.t().contact.introText }}
   </p>
 
-  <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+  <form class="contact-form" action="https://formspree.io/f/xrpekqzq" method="POST">
     <div class="form-group">
       <label for="name" class="form-label">{{ state.t().contact.formName }} *</label>
       <input 
@@ -18,7 +18,7 @@
         id="name" 
         name="name" 
         class="form-control"
-        [(ngModel)]="formData.name" 
+        autocomplete="name"
         [placeholder]="state.t().contact.formNamePlaceholder" 
         required>
     </div>
@@ -30,7 +30,7 @@
         id="email" 
         name="_replyto" 
         class="form-control"
-        [(ngModel)]="formData._replyto" 
+        autocomplete="email"
         [placeholder]="state.t().contact.formEmailPlaceholder" 
         required>
     </div>
@@ -42,33 +42,15 @@
         name="message" 
         rows="5" 
         class="form-control"
-        [(ngModel)]="formData.message" 
         [placeholder]="state.t().contact.formMessagePlaceholder" 
         required></textarea>
     </div>
 
-    @if (submitSuccess) {
-      <div class="alert alert--success">
-        {{ state.t().contact.successMsg }}
-      </div>
-    }
-
-    @if (submitError) {
-      <div class="alert alert--error">
-        {{ state.t().contact.errorMsg }}
-      </div>
-    }
-
     <button 
       type="submit" 
-      class="btn btn--primary submit-btn" 
-      [disabled]="isSubmitting || !contactForm.form.valid">
-      @if (isSubmitting) {
-        <span>{{ state.t().contact.sendingBtn }}</span>
-      } @else {
-        <span>{{ state.t().contact.submitBtn }}</span>
-        <span aria-hidden="true">↗</span>
-      }
+      class="btn btn--primary submit-btn">
+      <span>{{ state.t().contact.submitBtn }}</span>
+      <span aria-hidden="true">↗</span>
     </button>
   </form>
 </section>
