@@ -9,12 +9,15 @@
   <div class="skills-grid">
     @for (category of state.t().skills.categories; track category.title) {
       <div class="skill-category-card">
-        <p class="skill-kind">stack</p>
-        <h3 class="category-title">{{ category.title }}</h3>
-        
-        <ul class="tags" aria-label="Habilidades de la categoría">
+        <h3 class="category-title">
+          <span class="folder-icon">📁</span> {{ category.title }}
+        </h3>
+        <ul class="skills-list">
           @for (item of category.skills; track item) {
-            <li class="tag-item">{{ item }}</li>
+            <li class="skill-item">
+              <span class="check-symbol">›</span>
+              <span class="skill-text">{{ item }}</span>
+            </li>
           }
         </ul>
       </div>
