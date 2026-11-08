@@ -1,0 +1,62 @@
+<section class="container section" id="proyectos" aria-labelledby="proyectos-titulo">
+  <div class="section__header">
+    <h2 class="section__title" id="proyectos-titulo">
+      <span class="prefix">~/</span>{{ state.t().projects.sectionTitle.replace('~/', '') }}
+    </h2>
+    <p class="section__desc">{{ state.t().projects.sectionSubtitle }}</p>
+  </div>
+
+  <div class="projects-grid">
+    @for (project of state.t().projects.items; track project.id) {
+      <article class="project-card" [class.is-highlighted]="project.id === 'milfshakes' || project.id === 'ecommerce-java'">
+        <div class="card-top">
+          <span class="project-kind">{{ project.kind }}</span>
+          @if (project.inProgress) {
+            <span class="badge badge--warning">
+              {{ state.t().projects.inProgressBadge }}
+            </span>
+          }
+        </div>
+
+        <h3 class="project-title">{{ project.title }}</h3>
+        <p class="project-desc">{{ project.desc }}</p>
+
+        <ul class="tags" aria-label="Tecnologías">
+          @for (tag of project.tags; track tag) {
+            <li class="tag-item">{{ tag }}</li>
+          }
+        </ul>
+
+        <div class="card-footer">
+          @if (project.inProgress) {
+            <button 
+              type="button" 
+              class="project-link notice-trigger" 
+              (click)="showNotice(project, $event)">
+              {{ state.t().projects.viewProject }} <span aria-hidden="true">↗</span>
+            </button>
+          } @else {
+            <a 
+              class="project-link" 
+              [href]="project.link" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              [attr.aria-label]="state.t().projects.viewGithub + ': ' + project.title">
+              {{ state.t().projects.viewGithub }} <span aria-hidden="true">↗</span>
+            </a>
+          }
+        </div>
+      </article>
+    }
+  </div>
+
+  @if (activeNotice) {
+    <div class="notice-dialog-backdrop" (click)="closeNotice()">
+      <div class="notice-dialog" (click)="$event.stopPropagation()">
+        <p class="notice-msg">{{ activeNotice }}</p>
+        <button type="button" class="btn btn--primary" (click)="closeNotice()">Entendido / Got it</button>
+      </div>
+    </div>
+  }
+</section>
+

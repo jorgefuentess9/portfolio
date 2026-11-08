@@ -1,0 +1,27 @@
+<section class="hero-section">
+  <div class="container hero-container">
+    <div class="hero-badge-wrap">
+      <span class="badge badge--accent">
+        <span class="pulse-dot"></span>
+        {{ state.t().hero.badge }}
+      </span>
+    </div>
+
+    <h1 class="hero__name">{{ state.t().hero.name }}</h1>
+    <p class="hero__subtitle">{{ state.t().hero.subtitle }}</p>
+
+    <p class="hero__intro">
+      {{ state.t().hero.intro }}
+    </p>
+
+    <div class="hero__links">
+      <a class="btn" href="https://github.com/jorgefuentess9" target="_blank" rel="noopener noreferrer">
+        {{ state.t().hero.githubBtn }} <span aria-hidden="true">↗</span>
+      </a>
+      <a class="btn btn--primary" href="#contacto">
+        {{ state.t().hero.contactBtn }} <span aria-hidden="true">↓</span>
+      </a>
+    </div>
+  </div>
+</section>
+

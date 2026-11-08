@@ -1,0 +1,75 @@
+<section class="container container--narrow section" id="contacto" aria-labelledby="contacto-titulo">
+  <div class="section__header">
+    <h2 class="section__title" id="contacto-titulo">
+      <span class="prefix">~/</span>{{ state.t().contact.sectionTitle.replace('~/', '') }}
+    </h2>
+    <p class="section__desc">{{ state.t().contact.sectionSubtitle }}</p>
+  </div>
+
+  <p class="contact-intro">
+    {{ state.t().contact.introText }}
+  </p>
+
+  <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+    <div class="form-group">
+      <label for="name" class="form-label">{{ state.t().contact.formName }} *</label>
+      <input 
+        type="text" 
+        id="name" 
+        name="name" 
+        class="form-control"
+        [(ngModel)]="formData.name" 
+        [placeholder]="state.t().contact.formNamePlaceholder" 
+        required>
+    </div>
+
+    <div class="form-group">
+      <label for="email" class="form-label">{{ state.t().contact.formEmail }} *</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="_replyto" 
+        class="form-control"
+        [(ngModel)]="formData._replyto" 
+        [placeholder]="state.t().contact.formEmailPlaceholder" 
+        required>
+    </div>
+
+    <div class="form-group">
+      <label for="message" class="form-label">{{ state.t().contact.formMessage }} *</label>
+      <textarea 
+        id="message" 
+        name="message" 
+        rows="5" 
+        class="form-control"
+        [(ngModel)]="formData.message" 
+        [placeholder]="state.t().contact.formMessagePlaceholder" 
+        required></textarea>
+    </div>
+
+    @if (submitSuccess) {
+      <div class="alert alert--success">
+        {{ state.t().contact.successMsg }}
+      </div>
+    }
+
+    @if (submitError) {
+      <div class="alert alert--error">
+        {{ state.t().contact.errorMsg }}
+      </div>
+    }
+
+    <button 
+      type="submit" 
+      class="btn btn--primary submit-btn" 
+      [disabled]="isSubmitting || !contactForm.form.valid">
+      @if (isSubmitting) {
+        <span>{{ state.t().contact.sendingBtn }}</span>
+      } @else {
+        <span>{{ state.t().contact.submitBtn }}</span>
+        <span aria-hidden="true">↗</span>
+      }
+    </button>
+  </form>
+</section>
+

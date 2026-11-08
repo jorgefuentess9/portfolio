@@ -1,0 +1,43 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#" class="brand">
+      <span class="prompt-symbol">~/</span>jorge-fuentes<span class="cursor">_</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="#proyectos" class="nav-link">{{ state.t().nav.projects }}</a>
+      <a href="#habilidades" class="nav-link">{{ state.t().nav.skills }}</a>
+      <a href="#formacion" class="nav-link">{{ state.t().nav.education }}</a>
+      <a href="#contacto" class="nav-link">{{ state.t().nav.contact }}</a>
+    </nav>
+
+    <div class="header-actions">
+      <!-- Selector de Idioma (ES / EN) -->
+      <button 
+        type="button" 
+        class="action-btn lang-btn" 
+        (click)="state.toggleLanguage()"
+        [attr.aria-label]="state.t().nav.langToggle"
+        title="Cambiar idioma / Switch language">
+        <span class="lang-tag" [class.active]="state.currentLang() === 'es'">ES</span>
+        <span class="lang-divider">/</span>
+        <span class="lang-tag" [class.active]="state.currentLang() === 'en'">EN</span>
+      </button>
+
+      <!-- Botón Modo Oscuro / Modo Claro -->
+      <button 
+        type="button" 
+        class="action-btn theme-btn" 
+        (click)="state.toggleTheme()"
+        [attr.aria-label]="state.t().nav.themeToggle"
+        [title]="state.currentTheme() === 'dark' ? 'Activar modo claro' : 'Activar modo oscuro'">
+        @if (state.currentTheme() === 'dark') {
+          <span class="theme-icon">🌙</span>
+        } @else {
+          <span class="theme-icon">☀️</span>
+        }
+      </button>
+    </div>
+  </div>
+</header>
+

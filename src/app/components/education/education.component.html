@@ -1,0 +1,30 @@
+<section class="container section" id="formacion" aria-labelledby="formacion-titulo">
+  <div class="section__header">
+    <h2 class="section__title" id="formacion-titulo">
+      <span class="prefix">~/</span>{{ state.t().education.sectionTitle.replace('~/', '') }}
+    </h2>
+    <p class="section__desc">{{ state.t().education.sectionSubtitle }}</p>
+  </div>
+
+  <div class="timeline">
+    @for (item of state.t().education.items; track item.degree) {
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3 class="timeline-degree">{{ item.degree }}</h3>
+            <span class="timeline-period">{{ item.period }}</span>
+          </div>
+          <p class="timeline-institution">{{ item.institution }}</p>
+
+          <ul class="timeline-details">
+            @for (detail of item.details; track detail) {
+              <li>{{ detail }}</li>
+            }
+          </ul>
+        </div>
+      </div>
+    }
+  </div>
+</section>
+

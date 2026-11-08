@@ -1,0 +1,27 @@
+<section class="container section" id="habilidades" aria-labelledby="habilidades-titulo">
+  <div class="section__header">
+    <h2 class="section__title" id="habilidades-titulo">
+      <span class="prefix">~/</span>{{ state.t().skills.sectionTitle.replace('~/', '') }}
+    </h2>
+    <p class="section__desc">{{ state.t().skills.sectionSubtitle }}</p>
+  </div>
+
+  <div class="skills-grid">
+    @for (category of state.t().skills.categories; track category.title) {
+      <div class="skill-category-card">
+        <h3 class="category-title">
+          <span class="folder-icon">📂</span> {{ category.title }}
+        </h3>
+        <ul class="skills-list">
+          @for (item of category.skills; track item) {
+            <li class="skill-item">
+              <span class="check-symbol">›</span>
+              <span class="skill-text">{{ item }}</span>
+            </li>
+          }
+        </ul>
+      </div>
+    }
+  </div>
+</section>
+
