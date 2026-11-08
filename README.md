@@ -1,59 +1,95 @@
-# PortfolioAngular
+# Portfolio Web Personal · Jorge Fuentes Aguilar
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.29.
+> **Dominio oficial:** [jorgefuentes.dev](https://jorgefuentes.dev)  
+> **Perfil:** Estudiante de Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM).
 
-## Development server
+Portfolio web personal rediseñado y migrado a **Angular 19+**, conservando una estética minimalista estilo terminal/dev y ampliando su arquitectura a una estructura moderna, modular y con microinteracciones reactivas.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
+## 🚀 Nuevas Funcionalidades y Mejoras
+
+- **Arquitectura Modular por Componentes:** Dividido limpiamente en componentes independientes (`Header`, `Hero`, `Projects`, `Skills`, `Education`, `Contact`, `Footer`).
+- **Dark / Light Mode Dinámico:** Selector en cabecera (🌙 / ☀️) con conmutación dinámica de variables CSS globales (`:root` y `body.light-mode`).
+- **Internacionalización Reactiva (i18n):** Selector de idioma (ES / EN) en el header controlado con Angular Signals (`computed()`) para cambiar todos los textos de la interfaz en tiempo real sin recargar.
+- **Microinteracciones y Efecto Hover Vivo:**
+  - Animación suave de elevación (*hover lift*) con sombra difuminada en Proyectos, Habilidades y Formación.
+  - Indicador lateral verde terminal activo al interactuar con las tarjetas.
+  - Marcadores de línea de tiempo reactivos en la sección de formación.
+- **Formulario de Contacto:** Integrado con el servicio de Formspree sin recargas ni bloqueos de interfaz.
+- **Favicon Vectorial SVG Personalizado:** Icono temático de terminal (`>_`) adaptado a la identidad de la web.
+
+---
+
+## 🛠️ Stack Tecnológico
+
+- **Framework:** Angular 19+ (Standalone Components, Signals & TypeScript).
+- **Estilos:** CSS3 Moderno con Custom Properties (Variables CSS) y soporte Dark/Light Mode.
+- **Control de Versiones:** Git & GitHub.
+- **Hosting & Despliegue:** Vercel (con redirección SPA vía `vercel.json`).
+- **Gestión de Dominio y DNS:** Cloudflare.
+- **Formularios:** Formspree.
+
+---
+
+## 📂 Estructura del Proyecto
+
+```text
+portfolio-angular/
+├── public/
+│   └── favicon.svg                          # Favicon vectorial temático (>_)
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── header/                      # Cabecera, navegación, toggles (ES/EN y 🌙/☀️)
+│   │   │   ├── hero/                        # Presentación DAM, status badge y enlaces
+│   │   │   ├── projects/                    # Grid 2x2 de proyectos con elevación y modal
+│   │   │   ├── skills/                      # Grid 2x2 de habilidades con carpetas y listas
+│   │   │   ├── education/                   # Timeline de formación DAM y cursos Cisco
+│   │   │   ├── contact/                     # Formulario de contacto conectado a Formspree
+│   │   │   └── footer/                      # Pie de página y copyright dinámico
+│   │   ├── services/
+│   │   │   └── portfolio-state.service.ts   # Estado global: i18n reactivo (ES/EN) y temas
+│   │   ├── app.ts / app.html / app.css      # Componente raíz orquestador
+│   │   └── app.config.ts                    # Configuración de la aplicación
+│   ├── styles.css                           # Variables de color globales y base terminal
+│   └── index.html                           # Entrada HTML principal
+├── vercel.json                              # Configuración de rewrites para Vercel SPA
+└── README.md                                # Documentación del proyecto
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 💻 Desarrollo Local
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Para clonar y ejecutar este proyecto en tu entorno local:
 
-```bash
-ng generate component component-name
-```
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/jorgefuentess9/<nombre-del-repo>.git
+   cd portfolio-angular
+   ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+2. Instalar dependencias:
+   ```bash
+   npm install
+   ```
 
-```bash
-ng generate --help
-```
+3. Iniciar el servidor de desarrollo:
+   ```bash
+   npm start
+   ```
+   *(La aplicación se abrirá por defecto en `http://localhost:4300/`)*
 
-## Building
+4. Compilar para producción:
+   ```bash
+   npm run build
+   ```
+   *(Los archivos optimizados se generan en `dist/portfolio-angular/browser`)*
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## 📬 Contacto & Redes
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- **Web:** [jorgefuentes.dev](https://jorgefuentes.dev)
+- **GitHub:** [@jorgefuentess9](https://github.com/jorgefuentess9)
