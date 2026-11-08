@@ -109,11 +109,11 @@ export class PortfolioStateService {
         categories: [
           {
             title: 'Lenguajes & Backend',
-            skills: ['Java (POO, MVC, JDBC)', 'Python (Scripting & Automatización)', 'TypeScript / JavaScript', 'HTML5 & CSS3 Moderno']
+            skills: ['Java (POO, MVC, JDBC)', 'Python (Scripting & Automatización)', 'TypeScript / JavaScript', 'HTML & CSS']
           },
           {
             title: 'Bases de Datos & Persistencia',
-            skills: ['PostgreSQL', 'MariaDB / MySQL', 'SQLite (Bases embebidas)', 'Diseño Relacional & Normalización', 'Optimización de Consultas']
+            skills: ['PostgreSQL', 'MariaDB / MySQL', 'Diseño Relacional & Normalización', 'Optimización de Consultas']
           },
           {
             title: 'Infraestructura, DevOps & Redes',
@@ -239,11 +239,11 @@ export class PortfolioStateService {
         categories: [
           {
             title: 'Languages & Backend',
-            skills: ['Java (OOP, MVC, JDBC)', 'Python (Scripting & Automation)', 'TypeScript / JavaScript', 'Modern HTML5 & CSS3']
+            skills: ['Java (OOP, MVC, JDBC)', 'Python (Scripting & Automation)', 'TypeScript / JavaScript', 'HTML & CSS']
           },
           {
             title: 'Databases & Persistence',
-            skills: ['PostgreSQL', 'MariaDB / MySQL', 'SQLite (Embedded DBs)', 'Relational Modeling & Normalization', 'Query Optimization']
+            skills: ['PostgreSQL', 'MariaDB / MySQL', 'Relational Modeling & Normalization', 'Query Optimization']
           },
           {
             title: 'Infrastructure, DevOps & Networks',
