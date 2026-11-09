@@ -196,6 +196,25 @@ a {
   color: #ffffff;
 }
 
+/* Botón de LinkedIn con estética profesional */
+.btn--linkedin {
+  border-color: #0a66c2;
+  color: #0a66c2;
+  background: rgba(10, 102, 194, 0.08);
+}
+
+.btn--linkedin:hover {
+  background: #0a66c2;
+  border-color: #0a66c2;
+  color: #ffffff;
+}
+
+.btn--linkedin .linkedin-icon {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+}
+
 /* Badges y chips de etiquetas */
 .tags {
   display: flex;
