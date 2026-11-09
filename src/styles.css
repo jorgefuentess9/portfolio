@@ -156,12 +156,12 @@ a {
   font-size: 0.95rem;
 }
 
-/* Botones estándar con estética dev */
+/* Botones estándar con estética dev y microinteracción de saltito */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.45rem;
+  gap: 0.5rem;
   min-height: 2.6rem;
   padding: 0.5rem 1.15rem;
   border: 1px solid var(--border-strong);
@@ -173,13 +173,20 @@ a {
   font-weight: 500;
   line-height: 1.2;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+              background-color 0.2s ease,
+              border-color 0.2s ease,
+              box-shadow 0.2s ease,
+              color 0.2s ease;
 }
 
 .btn:hover {
+  transform: translateY(-3px);
   background: var(--accent-bg);
   border-color: var(--accent-border);
   color: var(--accent);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3),
+              0 0 10px rgba(63, 185, 80, 0.1);
 }
 
 .btn--primary {
@@ -190,10 +197,21 @@ a {
 }
 
 .btn--primary:hover {
-  opacity: 0.92;
+  transform: translateY(-3px);
+  opacity: 0.95;
   background: var(--accent);
   border-color: var(--accent);
   color: #ffffff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3),
+              0 0 12px rgba(63, 185, 80, 0.25);
+}
+
+/* Iconos para botones sociales */
+.btn-icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  flex-shrink: 0;
 }
 
 /* Botón de LinkedIn con estética profesional */
@@ -204,15 +222,12 @@ a {
 }
 
 .btn--linkedin:hover {
+  transform: translateY(-3px);
   background: #0a66c2;
   border-color: #0a66c2;
   color: #ffffff;
-}
-
-.btn--linkedin .linkedin-icon {
-  width: 15px;
-  height: 15px;
-  fill: currentColor;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3),
+              0 0 12px rgba(10, 102, 194, 0.25);
 }
 
 /* Badges y chips de etiquetas */
