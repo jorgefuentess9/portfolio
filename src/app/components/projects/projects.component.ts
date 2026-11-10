@@ -23,7 +23,7 @@ export class ProjectsComponent {
   activeNotice: string | null = null;
 
   showNotice(project: ProjectItem, event: MouseEvent): void {
-    if (project.inProgress && project.notice) {
+    if ((project.inProgress || project.notice) && project.notice) {
       event.preventDefault();
       this.activeNotice = project.notice;
     }

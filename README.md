@@ -18,13 +18,15 @@ Portfolio web personal rediseñado y migrado a **Angular 19+**, conservando una 
   - Marcadores de línea de tiempo reactivos en la sección de formación.
 - **Formulario de Contacto:** Integrado con el servicio de Formspree sin recargas ni bloqueos de interfaz.
 - **Favicon Vectorial SVG Personalizado:** Icono temático de terminal (`>_`) adaptado a la identidad de la web.
+- **Tests Unitarios por Componente:** Cobertura con archivos `.spec.ts` independientes para `App` y todos los componentes usando **Vitest** y **jsdom**.
 
 ---
 
 ## 🛠️ Stack Tecnológico
 
-- **Framework:** Angular 19+ (Standalone Components, Signals & TypeScript).
+- **Framework:** Angular 21+ (Standalone Components, Signals & TypeScript).
 - **Internacionalización (i18n):** `@ngx-translate/core` & `@ngx-translate/http-loader`.
+- **Testing:** Vitest & jsdom (`@angular/build:unit-test`).
 - **Estilos:** CSS3 Moderno con Custom Properties (Variables CSS) y soporte Dark/Light Mode.
 - **Control de Versiones:** Git & GitHub.
 - **Hosting & Despliegue:** Vercel (con redirección SPA vía `vercel.json`).
@@ -55,6 +57,7 @@ portfolio-angular/
 │   │   ├── services/
 │   │   │   └── portfolio-state.service.ts   # Gestión de estado (temas e idioma activo)
 │   │   ├── app.ts / app.html / app.css      # Componente raíz orquestador
+│   │   ├── app.spec.ts                      # Tests unitarios del componente raíz
 │   │   └── app.config.ts                    # Proveedores HTTP y configuración de ngx-translate
 │   ├── styles.css                           # Variables de color globales y base terminal
 │   └── index.html                           # Entrada HTML principal
@@ -70,7 +73,7 @@ Para clonar y ejecutar este proyecto en tu entorno local:
 
 1. Clonar el repositorio:
    ```bash
-   git clone https://github.com/jorgefuentess9/<nombre-del-repo>.git
+   git clone https://github.com/jorgefuentess9/portfolio.git
    cd portfolio-angular
    ```
 
@@ -85,7 +88,13 @@ Para clonar y ejecutar este proyecto en tu entorno local:
    ```
    *(La aplicación se abrirá por defecto en `http://localhost:4300/`)*
 
-4. Compilar para producción:
+4. Ejecutar los tests unitarios:
+   ```bash
+   npm test
+   ```
+   *(Ejecuta los 8 archivos `.spec.ts` de los componentes con Vitest)*
+
+5. Compilar para producción:
    ```bash
    npm run build
    ```

@@ -11,7 +11,7 @@
       <article class="project-card">
         <div class="card-header-row">
           <p class="project-kind">{{ project.kind }}</p>
-          @if (project.inProgress) {
+          @if (project.inProgress || project.notice) {
             <span class="badge badge--warning">
               <span class="dot-warning" aria-hidden="true">•</span>
               {{ 'projects.inProgressBadge' | translate }}
@@ -29,7 +29,7 @@
         </ul>
 
         <div class="card-footer">
-          @if (project.inProgress) {
+          @if (project.inProgress || project.notice) {
             <button 
               type="button" 
               class="project-link notice-trigger" 
