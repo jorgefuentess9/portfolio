@@ -11,7 +11,7 @@ Portfolio web personal rediseñado y migrado a **Angular 19+**, conservando una 
 
 - **Arquitectura Modular por Componentes:** Dividido limpiamente en componentes independientes (`Header`, `Hero`, `Projects`, `Skills`, `Education`, `Contact`, `Footer`).
 - **Dark / Light Mode Dinámico:** Selector en cabecera (🌙 / ☀️) con conmutación dinámica de variables CSS globales (`:root` y `body.light-mode`).
-- **Internacionalización Reactiva (i18n):** Selector de idioma (ES / EN) en el header controlado con Angular Signals (`computed()`) para cambiar todos los textos de la interfaz en tiempo real sin recargar.
+- **Internacionalización con `@ngx-translate` (i18n):** Selector de idioma (ES / EN) en el header utilizando `@ngx-translate/core` y `@ngx-translate/http-loader`, cargando dinámicamente los archivos JSON desde `public/i18n/es.json` y `public/i18n/en.json`.
 - **Microinteracciones y Efecto Hover Vivo:**
   - Animación suave de elevación (*hover lift*) con sombra difuminada en Proyectos, Habilidades y Formación.
   - Indicador lateral verde terminal activo al interactuar con las tarjetas.
@@ -24,6 +24,7 @@ Portfolio web personal rediseñado y migrado a **Angular 19+**, conservando una 
 ## 🛠️ Stack Tecnológico
 
 - **Framework:** Angular 19+ (Standalone Components, Signals & TypeScript).
+- **Internacionalización (i18n):** `@ngx-translate/core` & `@ngx-translate/http-loader`.
 - **Estilos:** CSS3 Moderno con Custom Properties (Variables CSS) y soporte Dark/Light Mode.
 - **Control de Versiones:** Git & GitHub.
 - **Hosting & Despliegue:** Vercel (con redirección SPA vía `vercel.json`).
@@ -37,6 +38,9 @@ Portfolio web personal rediseñado y migrado a **Angular 19+**, conservando una 
 ```text
 portfolio-angular/
 ├── public/
+│   ├── i18n/
+│   │   ├── es.json                          # Diccionario de traducción en Español
+│   │   └── en.json                          # Diccionario de traducción en Inglés
 │   └── favicon.svg                          # Favicon vectorial temático (>_)
 ├── src/
 │   ├── app/
@@ -49,9 +53,9 @@ portfolio-angular/
 │   │   │   ├── contact/                     # Formulario de contacto conectado a Formspree
 │   │   │   └── footer/                      # Pie de página y copyright dinámico
 │   │   ├── services/
-│   │   │   └── portfolio-state.service.ts   # Estado global: i18n reactivo (ES/EN) y temas
+│   │   │   └── portfolio-state.service.ts   # Gestión de estado (temas e idioma activo)
 │   │   ├── app.ts / app.html / app.css      # Componente raíz orquestador
-│   │   └── app.config.ts                    # Configuración de la aplicación
+│   │   └── app.config.ts                    # Proveedores HTTP y configuración de ngx-translate
 │   ├── styles.css                           # Variables de color globales y base terminal
 │   └── index.html                           # Entrada HTML principal
 ├── vercel.json                              # Configuración de rewrites para Vercel SPA

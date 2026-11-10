@@ -1,15 +1,22 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PortfolioStateService } from '../../services/portfolio-state.service';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { PortfolioStateService, EducationItem } from '../../services/portfolio-state.service';
 
 @Component({
   selector: 'app-education',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './education.component.html',
   styleUrls: ['./education.component.css']
 })
 export class EducationComponent {
   state = inject(PortfolioStateService);
-}
+  private translate = inject(TranslateService);
 
+  private rawEducation = this.translate.translate('education.items');
+  educationItems = computed<EducationItem[]>(() => {
+    const val = this.rawEducation();
+    return Array.isArray(val) ? (val as unknown as EducationItem[]) : [];
+  });
+}

@@ -5,10 +5,10 @@
     </a>
 
     <nav class="nav-links" aria-label="Navegación principal">
-      <a href="#proyectos" class="nav-link">{{ state.t().nav.projects }}</a>
-      <a href="#habilidades" class="nav-link">{{ state.t().nav.skills }}</a>
-      <a href="#formacion" class="nav-link">{{ state.t().nav.education }}</a>
-      <a href="#contacto" class="nav-link">{{ state.t().nav.contact }}</a>
+      <a href="#proyectos" class="nav-link">{{ 'nav.projects' | translate }}</a>
+      <a href="#habilidades" class="nav-link">{{ 'nav.skills' | translate }}</a>
+      <a href="#formacion" class="nav-link">{{ 'nav.education' | translate }}</a>
+      <a href="#contacto" class="nav-link">{{ 'nav.contact' | translate }}</a>
     </nav>
 
     <div class="header-actions">
@@ -17,7 +17,7 @@
         type="button" 
         class="action-btn lang-btn" 
         (click)="state.toggleLanguage()"
-        [attr.aria-label]="state.t().nav.langToggle"
+        [attr.aria-label]="'nav.langToggle' | translate"
         title="Cambiar idioma / Switch language">
         <span class="lang-tag" [class.active]="state.currentLang() === 'es'">ES</span>
         <span class="lang-divider">/</span>
@@ -29,7 +29,7 @@
         type="button" 
         class="action-btn theme-btn" 
         (click)="state.toggleTheme()"
-        [attr.aria-label]="state.t().nav.themeToggle"
+        [attr.aria-label]="'nav.themeToggle' | translate"
         [title]="state.currentTheme() === 'dark' ? 'Activar modo claro' : 'Activar modo oscuro'">
         @if (state.currentTheme() === 'dark') {
           <span class="theme-icon">🌙</span>
@@ -40,4 +40,3 @@
     </div>
   </div>
 </header>
-

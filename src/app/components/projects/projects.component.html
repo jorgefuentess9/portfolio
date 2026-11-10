@@ -1,20 +1,20 @@
 <section class="container section" id="proyectos" aria-labelledby="proyectos-titulo">
   <div class="section__header">
     <h2 class="section__title" id="proyectos-titulo">
-      <span class="prefix">~/</span>{{ state.t().projects.sectionTitle.replace('~/', '') }}
+      <span class="prefix">{{ 'projects.sectionPrefix' | translate }}</span>{{ 'projects.sectionTitle' | translate }}
     </h2>
-    <p class="section__desc">{{ state.t().projects.sectionSubtitle }}</p>
+    <p class="section__desc">{{ 'projects.sectionSubtitle' | translate }}</p>
   </div>
 
   <div class="projects-grid">
-    @for (project of state.t().projects.items; track project.id) {
+    @for (project of projectsList(); track project.id) {
       <article class="project-card">
         <div class="card-header-row">
           <p class="project-kind">{{ project.kind }}</p>
           @if (project.inProgress) {
             <span class="badge badge--warning">
               <span class="dot-warning" aria-hidden="true">•</span>
-              {{ state.t().projects.inProgressBadge }}
+              {{ 'projects.inProgressBadge' | translate }}
             </span>
           }
         </div>
@@ -34,7 +34,7 @@
               type="button" 
               class="project-link notice-trigger" 
               (click)="showNotice(project, $event)">
-              {{ state.t().projects.viewProject }} <span aria-hidden="true">↗</span>
+              {{ 'projects.viewProject' | translate }} <span aria-hidden="true">↗</span>
             </button>
           } @else {
             <a 
@@ -42,8 +42,8 @@
               [href]="project.link" 
               target="_blank" 
               rel="noopener noreferrer"
-              [attr.aria-label]="state.t().projects.viewGithub + ': ' + project.title">
-              {{ state.t().projects.viewGithub }} <span aria-hidden="true">↗</span>
+              [attr.aria-label]="('projects.viewGithub' | translate) + ': ' + project.title">
+              {{ 'projects.viewGithub' | translate }} <span aria-hidden="true">↗</span>
             </a>
           }
         </div>
@@ -55,7 +55,7 @@
     <div class="notice-dialog-backdrop" (click)="closeNotice()">
       <div class="notice-dialog" (click)="$event.stopPropagation()">
         <p class="notice-msg">{{ activeNotice }}</p>
-        <button type="button" class="btn btn--primary" (click)="closeNotice()">Entendido / Got it</button>
+        <button type="button" class="btn btn--primary" (click)="closeNotice()">{{ 'projects.gotItBtn' | translate }}</button>
       </div>
     </div>
   }

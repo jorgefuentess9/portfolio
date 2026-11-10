@@ -1,0 +1,156 @@
+{
+  "nav": {
+    "projects": "~/proyectos",
+    "skills": "~/habilidades",
+    "education": "~/formación",
+    "contact": "~/contacto",
+    "themeToggle": "Cambiar modo",
+    "langToggle": "Idioma"
+  },
+  "hero": {
+    "name": "Jorge Fuentes Aguilar",
+    "badge": "DAM Developer",
+    "subtitle": "Estudiante de Desarrollo de Aplicaciones Multiplataforma - DAM",
+    "intro": "Desarrollo aplicaciones de escritorio y web con foco en el código limpio, arquitecturas escalables y bases de datos bien estructuradas. Me gusta que las soluciones sean simples, legibles y fáciles de mantener.",
+    "githubBtn": "GitHub",
+    "contactBtn": "Contacto"
+  },
+  "projects": {
+    "sectionPrefix": "~/",
+    "sectionTitle": "proyectos",
+    "sectionSubtitle": "Proyectos destacados y desarrollos en curso",
+    "viewGithub": "Ver en GitHub",
+    "viewProject": "Ver proyecto",
+    "inProgressBadge": "En desarrollo",
+    "gotItBtn": "Entendido",
+    "items": [
+      {
+        "id": "viduke-club",
+        "kind": "web",
+        "title": "ViDuke Club",
+        "desc": "Web de alquiler de videojuegos construida con HTML, CSS y JavaScript, con una interfaz clara y la lógica en el lado cliente.",
+        "tags": ["HTML", "CSS", "JS"],
+        "link": "https://github.com/jorgefuentess9/viduke-club"
+      },
+      {
+        "id": "ecommerce-java",
+        "kind": "escritorio",
+        "title": "E-Commerce & Control de Stock",
+        "desc": "Aplicación de escritorio en Java Swing para gestionar un comercio y su inventario. Arquitectura MVC y persistencia en MariaDB mediante JDBC.",
+        "tags": ["Java Swing", "MVC", "MariaDB", "JDBC"],
+        "link": "https://github.com/jorgefuentess9/ecommerce-java-db"
+      },
+      {
+        "id": "milfshakes",
+        "kind": "base de datos",
+        "title": "M***shakes",
+        "desc": "Modelo relacional diseñado sobre PostgreSQL, con el entorno de base de datos en contenedores Docker para poder reproducirlo en cualquier máquina.",
+        "tags": ["PostgreSQL", "Docker"],
+        "link": "https://github.com/jorgefuentess9/m-shakes"
+      },
+      {
+        "id": "datagame",
+        "kind": "proyecto personal",
+        "title": "DataGame",
+        "desc": "Plataforma web de valoraciones y reseñas de videojuegos. Diseño de arquitectura de software y modelo relacional en PostgreSQL.",
+        "tags": ["PostgreSQL", "Base de Datos", "Web"],
+        "link": "#",
+        "inProgress": true,
+        "notice": "⚡ Proyecto en desarrollo: Actualmente estoy diseñando la arquitectura de datos y la interfaz de DataGame. ¡Estará disponible pronto!",
+        "noticeTitle": "~/datagame"
+      }
+    ]
+  },
+  "skills": {
+    "sectionPrefix": "~/",
+    "sectionTitle": "habilidades",
+    "sectionSubtitle": "Stack técnico, herramientas y habilidades personales",
+    "technicalTitle": "Tecnologías & Bases de Datos",
+    "systemsTitle": "Sistemas & Cloud",
+    "softTitle": "Soft Skills",
+    "categories": [
+      {
+        "title": "Lenguajes & Backend",
+        "skills": [
+          "Java (POO, MVC, JDBC)",
+          "Python (Scripting & Automatización)",
+          "TypeScript / JavaScript",
+          "HTML & CSS"
+        ]
+      },
+      {
+        "title": "Bases de Datos & Persistencia",
+        "skills": [
+          "PostgreSQL",
+          "MariaDB / MySQL",
+          "Diseño Relacional & Normalización",
+          "Optimización de Consultas"
+        ]
+      },
+      {
+        "title": "Infraestructura, DevOps & Redes",
+        "skills": [
+          "Docker (Contenedores & Volúmenes)",
+          "Linux / Ubuntu Server",
+          "Cisco Networking Academy",
+          "Git & GitHub"
+        ]
+      },
+      {
+        "title": "Competencias Profesionales",
+        "skills": [
+          "Resolución metódica de problemas",
+          "Código limpio y mantenible",
+          "Trabajo en equipo y comunicación",
+          "Aprendizaje continuo y autonomía"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "sectionPrefix": "~/",
+    "sectionTitle": "formación",
+    "sectionSubtitle": "Itinerario académico y certificaciones técnicas",
+    "items": [
+      {
+        "degree": "Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)",
+        "institution": "Formación Profesional Oficial",
+        "period": "En curso",
+        "details": [
+          "Desarrollo de software multiplataforma, bases de datos relacionales (PostgreSQL, MariaDB, MySQL, SQLite) y sistemas.",
+          "Aplicaciones de escritorio y web orientadas a buenas prácticas y código limpio."
+        ]
+      },
+      {
+        "degree": "Introducción a la Ciberseguridad",
+        "institution": "Cisco Networking Academy",
+        "period": "Completado",
+        "details": [
+          "Conceptos fundamentales de seguridad en redes, defensa digital, detección de amenazas y protección de la privacidad.",
+          "Principios de seguridad aplicados a sistemas y comunicaciones."
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "sectionPrefix": "~/",
+    "sectionTitle": "contacto",
+    "sectionSubtitle": "¿Tienes una propuesta, una duda o quieres colaborar en un proyecto?",
+    "introText": "Escríbeme a través del siguiente formulario y te responderé con la mayor brevedad. También puedes encontrarme en mis perfiles oficiales.",
+    "formName": "Nombre completo",
+    "formNamePlaceholder": "Ej. Alex García",
+    "formEmail": "Correo electrónico",
+    "formEmailPlaceholder": "tu@correo.com",
+    "formMessage": "Mensaje",
+    "formMessagePlaceholder": "Cuéntame sobre tu propuesta, proyecto o consulta...",
+    "submitBtn": "Enviar mensaje",
+    "sendingBtn": "Enviando mensaje...",
+    "successMsg": "✅ ¡Mensaje enviado con éxito! Te responderé lo antes posible.",
+    "errorMsg": "❌ Ocurrió un error al enviar el mensaje. Por favor intenta de nuevo."
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "designedWith": "Construido con Angular 19+"
+  }
+}
+
