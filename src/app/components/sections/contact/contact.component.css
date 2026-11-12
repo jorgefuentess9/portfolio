@@ -15,6 +15,14 @@
   gap: 1.4rem;
 }
 
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .form-group {
   display: flex;
   flex-direction: column;
@@ -68,6 +76,12 @@ textarea.form-control {
   background: rgba(248, 81, 73, 0.1);
   border: 1px solid rgba(248, 81, 73, 0.3);
   color: #f85149;
+}
+
+:host-context(body.light-mode) .alert--error {
+  background: rgba(207, 34, 46, 0.08);
+  border-color: rgba(207, 34, 46, 0.35);
+  color: #cf222e;
 }
 
 .submit-btn {

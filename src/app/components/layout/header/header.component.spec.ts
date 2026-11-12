@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideTranslateService, TranslateService } from '@ngx-translate/core';
 import { HeaderComponent } from './header.component';
-import { PortfolioStateService } from '../../services/portfolio-state.service';
+import { PortfolioStateService } from '../../../services/portfolio-state.service';
 
 describe('HeaderComponent', () => {
   let fixture: ComponentFixture<HeaderComponent>;

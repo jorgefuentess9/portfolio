@@ -1,17 +1,15 @@
 import { Component, inject, computed } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { PortfolioStateService, SkillCategory } from '../../services/portfolio-state.service';
+import { SkillCategory } from '../../../models/skill.model';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule, TranslatePipe],
+  imports: [TranslatePipe],
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent {
-  state = inject(PortfolioStateService);
   private translate = inject(TranslateService);
 
   private rawCategories = this.translate.translate('skills.categories');
