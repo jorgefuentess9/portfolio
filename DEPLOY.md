@@ -30,7 +30,7 @@ Como ya tenías `jorgefuentes.dev` enlazado:
 
 Puedes retocar los textos, proyectos o añadir secciones antes de desplegar:
 - **Traducciones y Datos (proyectos, habilidades, formación):** `public/i18n/es.json` y `public/i18n/en.json`
-- **Estado (tema e idioma activo):** `src/app/services/portfolio-state.service.ts`
+- **Estado (tema e idioma activo derivado de `ngx-translate`):** `src/app/services/portfolio-state.service.ts`
 - **Modelos e interfaces:** `src/app/models/`
 - **Estilos globales y paleta:** `src/styles.css`
 - **Componentes:** `src/app/components/layout/` y `src/app/components/sections/`

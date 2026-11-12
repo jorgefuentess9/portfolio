@@ -62,7 +62,7 @@ portfolio/
 │   │   │   ├── education.model.ts           # Interfaz EducationItem
 │   │   │   └── portfolio-state.model.ts     # Tipos Language y Theme
 │   │   ├── services/
-│   │   │   └── portfolio-state.service.ts   # Gestión de estado (tema e idioma activo sincronizado con ngx-translate)
+│   │   │   └── portfolio-state.service.ts   # Gestión del tema y exposición del idioma activo derivado de ngx-translate
 │   │   ├── app.ts / app.html / app.css      # Componente raíz orquestador
 │   │   ├── app.spec.ts                      # Tests unitarios del componente raíz
 │   │   └── app.config.ts                    # Proveedores HTTP y configuración de ngx-translate

@@ -1,5 +1,7 @@
-import { Injectable, signal, inject } from '@angular/core';
+import { Injectable, signal, inject, Signal } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { TranslateService } from '@ngx-translate/core';
+import { map } from 'rxjs';
 import { Language, Theme } from '../models/portfolio-state.model';
 
 @Injectable({
@@ -11,13 +13,16 @@ export class PortfolioStateService {
   // Estado de Tema (Dark / Light)
   currentTheme = signal<Theme>('dark');
 
-  // Estado de Idioma actual sincronizado con ngx-translate
-  currentLang = signal<Language>('es');
+  // Idioma activo derivado de TranslateService como única fuente de verdad
+  readonly currentLang: Signal<Language> = toSignal(
+    this.translate.onLangChange.pipe(map(e => e.lang as Language)),
+    { initialValue: (this.translate.getCurrentLang() === 'en' ? 'en' : 'es') as Language }
+  );
 
   constructor() {
     this.translate.addLangs(['es', 'en']);
     this.translate.setFallbackLang('es');
-    this.translate.use('es');
+    this.setLanguage('es');
   }
 
   toggleTheme(): void {
@@ -42,10 +47,10 @@ export class PortfolioStateService {
   }
 
   setLanguage(lang: Language): void {
-    this.currentLang.set(lang);
     this.translate.use(lang);
     if (typeof document !== 'undefined') {
       document.documentElement.lang = lang;
     }
   }
 }
+
