@@ -1,15 +1,16 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
-import { PortfolioStateService } from '../../services/portfolio-state.service';
+import { PortfolioStateService } from '../../../services/portfolio-state.service';
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-footer',
   standalone: true,
   imports: [CommonModule, TranslatePipe],
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  templateUrl: './footer.component.html',
+  styleUrls: ['./footer.component.css']
 })
-export class HeaderComponent {
+export class FooterComponent {
   state = inject(PortfolioStateService);
+  currentYear = new Date().getFullYear();
 }

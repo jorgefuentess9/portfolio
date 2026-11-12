@@ -1,7 +1,8 @@
 import { Component, inject, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { PortfolioStateService, ProjectItem } from '../../services/portfolio-state.service';
+import { PortfolioStateService } from '../../../services/portfolio-state.service';
+import { ProjectItem } from '../../../models/project.model';
 
 @Component({
   selector: 'app-projects',

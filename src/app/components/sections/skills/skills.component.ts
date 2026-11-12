@@ -1,7 +1,8 @@
 import { Component, inject, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { PortfolioStateService, SkillCategory } from '../../services/portfolio-state.service';
+import { PortfolioStateService } from '../../../services/portfolio-state.service';
+import { SkillCategory } from '../../../models/skill.model';
 
 @Component({
   selector: 'app-skills',

@@ -14,7 +14,7 @@ Cuando conectes este repositorio en el panel de Vercel (o si actualizas el repos
 - **Output Directory:** `dist/portfolio-angular/browser`
 - **Install Command:** `npm install`
 
-> **Nota:** Ya hemos añadido el archivo `vercel.json` con la regla de reescritura de URLs SPA para evitar errores 404 al navegar o recargar.
+> **Nota:** El archivo `vercel.json` incluye la regla de reescritura de URLs SPA para evitar errores 404 al navegar o recargar.
 
 ---
 
@@ -29,6 +29,8 @@ Como ya tenías `jorgefuentes.dev` enlazado:
 ## 3. Modificaciones antes del despliegue
 
 Puedes retocar los textos, proyectos o añadir secciones antes de desplegar:
-- **Traducciones y Datos:** `src/app/services/portfolio-state.service.ts`
+- **Traducciones y Datos (proyectos, habilidades, formación):** `public/i18n/es.json` y `public/i18n/en.json`
+- **Estado (tema e idioma activo):** `src/app/services/portfolio-state.service.ts`
+- **Modelos e interfaces:** `src/app/models/`
 - **Estilos globales y paleta:** `src/styles.css`
-- **Componentes:** dentro de `src/app/components/`
+- **Componentes:** `src/app/components/layout/` y `src/app/components/sections/`

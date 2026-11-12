@@ -3,13 +3,13 @@
 > **Dominio oficial:** [jorgefuentes.dev](https://jorgefuentes.dev)  
 > **Perfil:** Estudiante de Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM).
 
-Portfolio web personal rediseñado y migrado a **Angular 19+**, conservando una estética minimalista estilo terminal/dev y ampliando su arquitectura a una estructura moderna, modular y con microinteracciones reactivas.
+Portfolio web personal rediseñado y migrado a **Angular 21+**, conservando una estética minimalista estilo terminal/dev y ampliando su arquitectura a una estructura moderna, modular y con microinteracciones reactivas.
 
 ---
 
 ## 🚀 Nuevas Funcionalidades y Mejoras
 
-- **Arquitectura Modular por Componentes:** Dividido limpiamente en componentes independientes (`Header`, `Hero`, `Projects`, `Skills`, `Education`, `Contact`, `Footer`).
+- **Arquitectura Modular por Componentes:** Organizado en `layout/` (`Header`, `Footer`) y `sections/` (`Hero`, `Projects`, `Skills`, `Education`, `Contact`).
 - **Dark / Light Mode Dinámico:** Selector en cabecera (🌙 / ☀️) con conmutación dinámica de variables CSS globales (`:root` y `body.light-mode`).
 - **Internacionalización con `@ngx-translate` (i18n):** Selector de idioma (ES / EN) en el header utilizando `@ngx-translate/core` y `@ngx-translate/http-loader`, cargando dinámicamente los archivos JSON desde `public/i18n/es.json` y `public/i18n/en.json`.
 - **Microinteracciones y Efecto Hover Vivo:**
@@ -38,30 +38,38 @@ Portfolio web personal rediseñado y migrado a **Angular 19+**, conservando una 
 ## 📂 Estructura del Proyecto
 
 ```text
-portfolio-angular/
+portfolio/
 ├── public/
 │   ├── i18n/
-│   │   ├── es.json                          # Diccionario de traducción en Español
-│   │   └── en.json                          # Diccionario de traducción en Inglés
+│   │   ├── es.json                          # Textos y datos (proyectos, skills, formación) en Español
+│   │   └── en.json                          # Textos y datos (proyectos, skills, formación) en Inglés
 │   └── favicon.svg                          # Favicon vectorial temático (>_)
 ├── src/
 │   ├── app/
 │   │   ├── components/
-│   │   │   ├── header/                      # Cabecera, navegación, toggles (ES/EN y 🌙/☀️)
-│   │   │   ├── hero/                        # Presentación DAM, status badge y enlaces
-│   │   │   ├── projects/                    # Grid 2x2 de proyectos con elevación y modal
-│   │   │   ├── skills/                      # Grid 2x2 de habilidades con carpetas y listas
-│   │   │   ├── education/                   # Timeline de formación DAM y cursos Cisco
-│   │   │   ├── contact/                     # Formulario de contacto conectado a Formspree
-│   │   │   └── footer/                      # Pie de página y copyright dinámico
+│   │   │   ├── layout/
+│   │   │   │   ├── header/                  # Cabecera, navegación, toggles (ES/EN y 🌙/☀️)
+│   │   │   │   └── footer/                  # Pie de página y copyright dinámico
+│   │   │   └── sections/
+│   │   │       ├── hero/                    # Presentación DAM, status badge y enlaces
+│   │   │       ├── projects/                # Grid 2x2 de proyectos con elevación y modal
+│   │   │       ├── skills/                  # Grid 2x2 de habilidades con carpetas y listas
+│   │   │       ├── education/               # Timeline de formación DAM y cursos Cisco
+│   │   │       └── contact/                 # Formulario de contacto conectado a Formspree
+│   │   ├── models/
+│   │   │   ├── project.model.ts             # Interfaz ProjectItem
+│   │   │   ├── skill.model.ts               # Interfaz SkillCategory
+│   │   │   ├── education.model.ts           # Interfaz EducationItem
+│   │   │   └── portfolio-state.model.ts     # Tipos Language y Theme
 │   │   ├── services/
-│   │   │   └── portfolio-state.service.ts   # Gestión de estado (temas e idioma activo)
+│   │   │   └── portfolio-state.service.ts   # Gestión de estado (tema e idioma activo sincronizado con ngx-translate)
 │   │   ├── app.ts / app.html / app.css      # Componente raíz orquestador
 │   │   ├── app.spec.ts                      # Tests unitarios del componente raíz
 │   │   └── app.config.ts                    # Proveedores HTTP y configuración de ngx-translate
 │   ├── styles.css                           # Variables de color globales y base terminal
 │   └── index.html                           # Entrada HTML principal
 ├── vercel.json                              # Configuración de rewrites para Vercel SPA
+├── DEPLOY.md                                # Guía de despliegue en Vercel y Cloudflare
 └── README.md                                # Documentación del proyecto
 ```
 
@@ -74,7 +82,7 @@ Para clonar y ejecutar este proyecto en tu entorno local:
 1. Clonar el repositorio:
    ```bash
    git clone https://github.com/jorgefuentess9/portfolio.git
-   cd portfolio-angular
+   cd portfolio
    ```
 
 2. Instalar dependencias:
@@ -86,13 +94,13 @@ Para clonar y ejecutar este proyecto en tu entorno local:
    ```bash
    npm start
    ```
-   *(La aplicación se abrirá por defecto en `http://localhost:4300/`)*
+   *(Ejecuta `ng serve --port 4300` y abre la aplicación en `http://localhost:4300/`)*
 
 4. Ejecutar los tests unitarios:
    ```bash
    npm test
    ```
-   *(Ejecuta los 8 archivos `.spec.ts` de los componentes con Vitest)*
+   *(Ejecuta los tests unitarios con Vitest)*
 
 5. Compilar para producción:
    ```bash

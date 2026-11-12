@@ -1,15 +1,15 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
-import { PortfolioStateService } from '../../services/portfolio-state.service';
+import { PortfolioStateService } from '../../../services/portfolio-state.service';
 
 @Component({
-  selector: 'app-contact',
+  selector: 'app-hero',
   standalone: true,
   imports: [CommonModule, TranslatePipe],
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  templateUrl: './hero.component.html',
+  styleUrls: ['./hero.component.css']
 })
-export class ContactComponent {
+export class HeroComponent {
   state = inject(PortfolioStateService);
 }

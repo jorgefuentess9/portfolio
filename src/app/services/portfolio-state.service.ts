@@ -1,32 +1,6 @@
 import { Injectable, signal, inject } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-
-export type Language = 'es' | 'en';
-export type Theme = 'dark' | 'light';
-
-export interface ProjectItem {
-  id: string;
-  kind: string;
-  title: string;
-  desc: string;
-  tags: string[];
-  link: string;
-  inProgress?: boolean;
-  notice?: string;
-  noticeTitle?: string;
-}
-
-export interface SkillCategory {
-  title: string;
-  skills: string[];
-}
-
-export interface EducationItem {
-  degree: string;
-  institution: string;
-  period: string;
-  details: string[];
-}
+import { Language, Theme } from '../models/portfolio-state.model';
 
 @Injectable({
   providedIn: 'root'
