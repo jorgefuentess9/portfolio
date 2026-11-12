@@ -1,7 +1,6 @@
 import { Component, inject, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { PortfolioStateService } from '../../../services/portfolio-state.service';
 import { ProjectItem } from '../../../models/project.model';
 
 @Component({
@@ -12,7 +11,6 @@ import { ProjectItem } from '../../../models/project.model';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent {
-  state = inject(PortfolioStateService);
   private translate = inject(TranslateService);
 
   private rawProjects = this.translate.translate('projects.items');

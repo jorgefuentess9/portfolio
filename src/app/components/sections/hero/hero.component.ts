@@ -1,7 +1,6 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
-import { PortfolioStateService } from '../../../services/portfolio-state.service';
 
 @Component({
   selector: 'app-hero',
@@ -10,6 +9,4 @@ import { PortfolioStateService } from '../../../services/portfolio-state.service
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.css']
 })
-export class HeroComponent {
-  state = inject(PortfolioStateService);
-}
+export class HeroComponent {}

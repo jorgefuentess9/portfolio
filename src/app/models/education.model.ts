@@ -4,3 +4,4 @@ export interface EducationItem {
   period: string;
   details: string[];
 }
+

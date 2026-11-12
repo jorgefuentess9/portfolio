@@ -1,7 +1,6 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
-import { PortfolioStateService } from '../../../services/portfolio-state.service';
 
 @Component({
   selector: 'app-footer',
@@ -11,6 +10,5 @@ import { PortfolioStateService } from '../../../services/portfolio-state.service
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
-  state = inject(PortfolioStateService);
   currentYear = new Date().getFullYear();
 }
