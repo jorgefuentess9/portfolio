@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { HeroComponent } from './components/sections/hero/hero.component';
 import { ProjectsComponent } from './components/sections/projects/projects.component';
@@ -12,7 +11,6 @@ import { FooterComponent } from './components/layout/footer/footer.component';
   selector: 'app-root',
   standalone: true,
   imports: [
-    CommonModule,
     HeaderComponent,
     HeroComponent,
     ProjectsComponent,

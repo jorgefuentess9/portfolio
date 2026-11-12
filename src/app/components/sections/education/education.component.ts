@@ -1,12 +1,11 @@
 import { Component, inject, computed } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { EducationItem } from '../../../models/education.model';
 
 @Component({
   selector: 'app-education',
   standalone: true,
-  imports: [CommonModule, TranslatePipe],
+  imports: [TranslatePipe],
   templateUrl: './education.component.html',
   styleUrls: ['./education.component.css']
 })

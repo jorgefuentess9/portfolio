@@ -34,3 +34,4 @@ Puedes retocar los textos, proyectos o añadir secciones antes de desplegar:
 - **Modelos e interfaces:** `src/app/models/`
 - **Estilos globales y paleta:** `src/styles.css`
 - **Componentes:** `src/app/components/layout/` y `src/app/components/sections/`
+- **Formulario de contacto (Formspree):** requiere tener el correo de notificación verificado y las notificaciones activas en el panel de Formspree (y reCAPTCHA desactivado para permitir el envío AJAX).

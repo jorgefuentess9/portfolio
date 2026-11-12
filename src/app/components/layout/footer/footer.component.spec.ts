@@ -16,7 +16,7 @@ describe('FooterComponent', () => {
     translate.setTranslation('es', {
       footer: {
         rights: 'Todos los derechos reservados.',
-        designedWith: 'Construido con Angular 19+'
+        designedWith: 'Construido con Angular'
       }
     });
 
@@ -37,7 +37,7 @@ describe('FooterComponent', () => {
     expect(el.querySelector('.footer-copy')?.textContent).toContain(String(expectedYear));
     expect(el.querySelector('.footer-copy')?.textContent).toContain('Jorge Fuentes Aguilar');
     expect(el.querySelector('.footer-copy')?.textContent).toContain('Todos los derechos reservados.');
-    expect(el.querySelector('.footer-tagline')?.textContent?.trim()).toBe('Construido con Angular 19+');
+    expect(el.querySelector('.footer-tagline')?.textContent?.trim()).toBe('Construido con Angular');
   });
 });
 

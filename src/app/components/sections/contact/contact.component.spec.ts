@@ -65,6 +65,8 @@ describe('ContactComponent', () => {
     expect(emailInput.getAttribute('name')).toBe('email');
     expect(messageInput.required).toBe(true);
     expect(subjectInput?.value).toBe('Nuevo mensaje desde el portfolio');
+    expect(gotchaInput?.classList.contains('hp-field')).toBe(true);
+    expect(gotchaInput?.getAttribute('style')).toBeNull();
     expect(gotchaInput?.getAttribute('aria-hidden')).toBe('true');
     expect(gotchaInput?.getAttribute('tabindex')).toBe('-1');
     expect(gotchaInput?.getAttribute('autocomplete')).toBe('off');

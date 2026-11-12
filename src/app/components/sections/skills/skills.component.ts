@@ -1,12 +1,11 @@
 import { Component, inject, computed } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { SkillCategory } from '../../../models/skill.model';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule, TranslatePipe],
+  imports: [TranslatePipe],
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css']
 })

@@ -1,5 +1,4 @@
 import { Component, OnDestroy, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
 
 export type ContactSubmitStatus = 'idle' | 'sending' | 'success' | 'error';
@@ -7,7 +6,7 @@ export type ContactSubmitStatus = 'idle' | 'sending' | 'success' | 'error';
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, TranslatePipe],
+  imports: [TranslatePipe],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })

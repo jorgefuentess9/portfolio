@@ -16,9 +16,9 @@ Portfolio web personal rediseñado y migrado a **Angular 21+**, conservando una 
   - Animación suave de elevación (*hover lift*) con sombra difuminada en Proyectos, Habilidades y Formación.
   - Indicador lateral verde terminal activo al interactuar con las tarjetas.
   - Marcadores de línea de tiempo reactivos en la sección de formación.
-- **Formulario de Contacto:** Integrado con el servicio de Formspree sin recargas ni bloqueos de interfaz.
+- **Formulario de Contacto AJAX:** Envío asíncrono (`fetch`) a Formspree sin salir de la web, con estados de envío/éxito/error, mensajes traducidos (ES / EN) y campo *honeypot* anti-spam.
 - **Favicon Vectorial SVG Personalizado:** Icono temático de terminal (`>_`) adaptado a la identidad de la web.
-- **Tests Unitarios por Componente:** Cobertura con archivos `.spec.ts` independientes para `App` y todos los componentes usando **Vitest** y **jsdom**.
+- **Tests Unitarios por Componente:** Cobertura con tests unitarios con **Vitest** y **jsdom** para `App` y todos los componentes.
 
 ---
 
@@ -55,7 +55,7 @@ portfolio/
 │   │   │       ├── projects/                # Grid 2x2 de proyectos con elevación y modal
 │   │   │       ├── skills/                  # Grid 2x2 de habilidades con carpetas y listas
 │   │   │       ├── education/               # Timeline de formación DAM y cursos Cisco
-│   │   │       └── contact/                 # Formulario de contacto conectado a Formspree
+│   │   │       └── contact/                 # Formulario de contacto AJAX con Formspree y honeypot
 │   │   ├── models/
 │   │   │   ├── project.model.ts             # Interfaz ProjectItem
 │   │   │   ├── skill.model.ts               # Interfaz SkillCategory
