@@ -16,6 +16,15 @@
     method="POST"
     (submit)="onSubmit($event)"
     (input)="onFormInput()">
+    <input type="hidden" name="_subject" value="Nuevo mensaje desde el portfolio">
+    <input
+      type="text"
+      name="_gotcha"
+      style="display:none"
+      aria-hidden="true"
+      tabindex="-1"
+      autocomplete="off">
+
     <div class="form-group">
       <label for="name" class="form-label">{{ 'contact.formName' | translate }} *</label>
       <input 
@@ -33,7 +42,7 @@
       <input 
         type="email" 
         id="email" 
-        name="_replyto" 
+        name="email" 
         class="form-control"
         autocomplete="email"
         [placeholder]="'contact.formEmailPlaceholder' | translate" 

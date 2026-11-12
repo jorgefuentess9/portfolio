@@ -57,10 +57,17 @@ describe('ContactComponent', () => {
     const nameInput = el.querySelector('#name') as HTMLInputElement;
     const emailInput = el.querySelector('#email') as HTMLInputElement;
     const messageInput = el.querySelector('#message') as HTMLTextAreaElement;
+    const subjectInput = el.querySelector('input[name="_subject"]') as HTMLInputElement;
+    const gotchaInput = el.querySelector('input[name="_gotcha"]') as HTMLInputElement;
 
     expect(nameInput.required).toBe(true);
     expect(emailInput.required).toBe(true);
+    expect(emailInput.getAttribute('name')).toBe('email');
     expect(messageInput.required).toBe(true);
+    expect(subjectInput?.value).toBe('Nuevo mensaje desde el portfolio');
+    expect(gotchaInput?.getAttribute('aria-hidden')).toBe('true');
+    expect(gotchaInput?.getAttribute('tabindex')).toBe('-1');
+    expect(gotchaInput?.getAttribute('autocomplete')).toBe('off');
     expect(el.querySelector('.submit-btn')?.textContent).toContain('Enviar mensaje');
   });
 
