@@ -10,7 +10,12 @@
     {{ 'contact.introText' | translate }}
   </p>
 
-  <form class="contact-form" action="https://formspree.io/f/xrpekqzq" method="POST">
+  <form
+    class="contact-form"
+    [attr.action]="formActionUrl"
+    method="POST"
+    (submit)="onSubmit($event)"
+    (input)="onFormInput()">
     <div class="form-group">
       <label for="name" class="form-label">{{ 'contact.formName' | translate }} *</label>
       <input 
@@ -46,10 +51,23 @@
         required></textarea>
     </div>
 
+    @if (submitStatus() === 'success') {
+      <div class="alert alert--success" role="status" aria-live="polite">
+        {{ 'contact.successMsg' | translate }}
+      </div>
+    }
+
+    @if (submitStatus() === 'error') {
+      <div class="alert alert--error" role="status" aria-live="polite">
+        {{ 'contact.errorMsg' | translate }}
+      </div>
+    }
+
     <button 
       type="submit" 
-      class="btn btn--primary submit-btn">
-      <span>{{ 'contact.submitBtn' | translate }}</span>
+      class="btn btn--primary submit-btn"
+      [disabled]="submitStatus() === 'sending'">
+      <span>{{ (submitStatus() === 'sending' ? 'contact.sendingBtn' : 'contact.submitBtn') | translate }}</span>
       <span aria-hidden="true">↗</span>
     </button>
   </form>

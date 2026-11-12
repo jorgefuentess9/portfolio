@@ -70,6 +70,12 @@ textarea.form-control {
   color: #f85149;
 }
 
+:host-context(body.light-mode) .alert--error {
+  background: rgba(207, 34, 46, 0.08);
+  border-color: rgba(207, 34, 46, 0.35);
+  color: #cf222e;
+}
+
 .submit-btn {
   align-self: flex-start;
   padding-inline: 1.5rem;
