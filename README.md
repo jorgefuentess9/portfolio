@@ -10,7 +10,7 @@ Portfolio web personal rediseñado y migrado a **Angular 21+**, conservando una 
 ## 🚀 Nuevas Funcionalidades y Mejoras
 
 - **Arquitectura Modular por Componentes:** Organizado en `layout/` (`Header`, `Footer`) y `sections/` (`Hero`, `Projects`, `Skills`, `Education`, `Contact`).
-- **Dark / Light Mode Dinámico:** Selector en cabecera (🌙 / ☀️) con conmutación dinámica de variables CSS globales (`:root` y `body.light-mode`).
+- **Dark / Light Mode Dinámico:** Selector en cabecera con iconos vectoriales SVG (luna / sol) y conmutación dinámica de variables CSS globales (`:root` y `body.light-mode`).
 - **Internacionalización con `@ngx-translate` (i18n):** Selector de idioma (ES / EN) en el header utilizando `@ngx-translate/core` y `@ngx-translate/http-loader`, cargando dinámicamente los archivos JSON desde `public/i18n/es.json` y `public/i18n/en.json`.
 - **Microinteracciones y Efecto Hover Vivo:**
   - Navegación y acciones de cabecera con cápsula flotante y pastilla deslizante fluida en hover (CSS Anchor Positioning).
@@ -49,7 +49,7 @@ portfolio/
 │   ├── app/
 │   │   ├── components/
 │   │   │   ├── layout/
-│   │   │   │   ├── header/                  # Cabecera, navegación, toggles (ES/EN y 🌙/☀️)
+│   │   │   │   ├── header/                  # Cabecera, navegación, toggles (ES/EN y Dark/Light SVG)
 │   │   │   │   └── footer/                  # Pie de página y copyright dinámico
 │   │   │   └── sections/
 │   │   │       ├── hero/                    # Presentación DAM, status badge y enlaces

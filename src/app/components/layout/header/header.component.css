@@ -163,8 +163,18 @@
 }
 
 .theme-btn {
-  font-size: 1rem;
-  padding-inline: 0.55rem;
+  padding-inline: 0.65rem;
+}
+
+.theme-icon {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  flex-shrink: 0;
 }
 
 @media (max-width: 680px) {

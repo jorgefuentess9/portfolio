@@ -74,14 +74,14 @@ describe('HeaderComponent', () => {
     const el = fixture.nativeElement as HTMLElement;
     const themeBtn = el.querySelector('.theme-btn') as HTMLButtonElement;
 
-    expect(themeBtn.textContent?.trim()).toBe('🌙');
+    expect(themeBtn.querySelector('.theme-icon--moon')).toBeTruthy();
     expect(document.body.classList.contains('light-mode')).toBe(false);
 
     themeBtn.click();
     fixture.detectChanges();
 
     expect(state.currentTheme()).toBe('light');
-    expect(themeBtn.textContent?.trim()).toBe('☀️');
+    expect(themeBtn.querySelector('.theme-icon--sun')).toBeTruthy();
     expect(document.body.classList.contains('light-mode')).toBe(true);
   });
 });
