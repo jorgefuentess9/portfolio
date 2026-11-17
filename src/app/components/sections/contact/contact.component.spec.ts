@@ -28,8 +28,8 @@ describe('ContactComponent', () => {
         formMessagePlaceholder: 'Tu mensaje...',
         submitBtn: 'Enviar mensaje',
         sendingBtn: 'Enviando mensaje...',
-        successMsg: '✅ ¡Mensaje enviado con éxito! Te responderé lo antes posible.',
-        errorMsg: '❌ Ocurrió un error al enviar el mensaje. Por favor intenta de nuevo.'
+        successMsg: '¡Mensaje enviado con éxito! Te responderé lo antes posible.',
+        errorMsg: 'Ocurrió un error al enviar el mensaje. Por favor intenta de nuevo.'
       }
     });
 
@@ -117,7 +117,7 @@ describe('ContactComponent', () => {
     const successAlert = el.querySelector('.alert--success[role="status"]');
     expect(successAlert).toBeTruthy();
     expect(successAlert?.textContent?.trim()).toBe(
-      '✅ ¡Mensaje enviado con éxito! Te responderé lo antes posible.'
+      '¡Mensaje enviado con éxito! Te responderé lo antes posible.'
     );
 
     expect(nameInput.value).toBe('');
@@ -148,7 +148,7 @@ describe('ContactComponent', () => {
     const errorAlert = el.querySelector('.alert--error[role="status"]');
     expect(errorAlert).toBeTruthy();
     expect(errorAlert?.textContent?.trim()).toBe(
-      '❌ Ocurrió un error al enviar el mensaje. Por favor intenta de nuevo.'
+      'Ocurrió un error al enviar el mensaje. Por favor intenta de nuevo.'
     );
 
     expect(nameInput.value).toBe('Jorge Fuentes');

@@ -56,7 +56,7 @@
         "tags": ["PostgreSQL", "Base de Datos", "Web"],
         "link": "#",
         "inProgress": true,
-        "notice": "⚡ Proyecto en desarrollo: Actualmente estoy diseñando la arquitectura de datos y la interfaz de DataGame. ¡Estará disponible pronto!",
+        "notice": "Proyecto en desarrollo: Actualmente estoy diseñando la arquitectura de datos y la interfaz de DataGame. ¡Estará disponible pronto!",
         "noticeTitle": "~/datagame"
       }
     ]
@@ -145,8 +145,8 @@
     "formMessagePlaceholder": "Cuéntame sobre tu propuesta, proyecto o consulta...",
     "submitBtn": "Enviar mensaje",
     "sendingBtn": "Enviando mensaje...",
-    "successMsg": "✅ ¡Mensaje enviado con éxito! Te responderé lo antes posible.",
-    "errorMsg": "❌ Ocurrió un error al enviar el mensaje. Por favor intenta de nuevo."
+    "successMsg": "¡Mensaje enviado con éxito! Te responderé lo antes posible.",
+    "errorMsg": "Ocurrió un error al enviar el mensaje. Por favor intenta de nuevo."
   },
   "footer": {
     "rights": "Todos los derechos reservados.",

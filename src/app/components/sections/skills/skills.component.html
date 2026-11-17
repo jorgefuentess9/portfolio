@@ -10,7 +10,7 @@
     @for (category of skillCategories(); track category.title) {
       <div class="skill-category-card">
         <h3 class="category-title">
-          <span class="folder-icon">📁</span> {{ category.title }}
+          {{ category.title }}
         </h3>
         <ul class="skills-list">
           @for (item of category.skills; track item) {
