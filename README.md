@@ -10,10 +10,10 @@ Portfolio web personal rediseñado y migrado a **Angular 21+**, conservando una 
 ## 🚀 Nuevas Funcionalidades y Mejoras
 
 - **Arquitectura Modular por Componentes:** Organizado en `layout/` (`Header`, `Footer`) y `sections/` (`Hero`, `Projects`, `Skills`, `Education`, `Contact`).
-- **Dark / Light Mode Dinámico:** Selector en cabecera con iconos vectoriales SVG (luna / sol) y conmutación dinámica de variables CSS globales (`:root` y `body.light-mode`).
-- **Internacionalización con `@ngx-translate` (i18n):** Selector de idioma (ES / EN) en el header utilizando `@ngx-translate/core` y `@ngx-translate/http-loader`, cargando dinámicamente los archivos JSON desde `public/i18n/es.json` y `public/i18n/en.json`.
+- **Dark / Light Mode Dinámico:** Selector en cabecera con iconos vectoriales SVG (luna / sol), conmutación dinámica de variables CSS globales (`:root` y `body.light-mode`) y persistencia en `localStorage`.
+- **Internacionalización con `@ngx-translate` (i18n):** Selector de idioma (ES / EN) en el header utilizando `@ngx-translate/core` y `@ngx-translate/http-loader`, cargando dinámicamente los archivos JSON desde `public/i18n/es.json` y `public/i18n/en.json` y recordando la elección en `localStorage`.
 - **Microinteracciones y Efecto Hover Vivo:**
-  - Navegación y acciones de cabecera con cápsula flotante y pastilla deslizante fluida en hover (CSS Anchor Positioning).
+  - Navegación y acciones de cabecera con cápsula flotante y pastilla deslizante fluida en hover (CSS Anchor Positioning), además de menú desplegable adaptativo en dispositivos móviles.
   - Animación suave de elevación (*hover lift*) con sombra difuminada en Proyectos, Habilidades y Formación.
   - Indicador lateral verde terminal activo al interactuar con las tarjetas.
   - Marcadores de línea de tiempo reactivos en la sección de formación.
@@ -115,3 +115,4 @@ Para clonar y ejecutar este proyecto en tu entorno local:
 
 - **Web:** [jorgefuentes.dev](https://jorgefuentes.dev)
 - **GitHub:** [@jorgefuentess9](https://github.com/jorgefuentess9)
+- **LinkedIn:** [Jorge Fuentes Aguilar](https://www.linkedin.com/in/jorge-fuentes-aguilar-700838443/)
