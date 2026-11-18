@@ -49,5 +49,13 @@ describe('SkillsComponent', () => {
     expect(cards[0].querySelector('.category-title')?.textContent).toContain('Lenguajes & Backend');
     expect(cards[0].querySelectorAll('.skill-item').length).toBe(3);
   });
+
+  it('should render SVG logos for technologies and full-width items for concepts', () => {
+    expect(component.getSkillIcon('Odoo ERP')).toBe('odoo');
+    expect(component.getSkillIcon('Python & venv')).toBe('python');
+    expect(component.isFullWidth('Java (POO, MVC)')).toBe(false);
+    expect(component.isFullWidth('Diseño Relacional & Normalización')).toBe(true);
+    expect(component.isFullWidth('Adaptabilidad y organización')).toBe(true);
+  });
 });
 
