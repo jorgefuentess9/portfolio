@@ -72,28 +72,36 @@
       {
         "title": "Languages & Backend",
         "skills": [
-          "Java (OOP, MVC, JDBC)",
-          "Python (Scripting & Automation)",
-          "TypeScript / JavaScript",
-          "HTML & CSS"
+          "Java (OOP, MVC)",
+          "Python & venv",
+          "Odoo ERP",
+          "Angular",
+          "TypeScript",
+          "JavaScript",
+          "HTML5",
+          "CSS3"
         ]
       },
       {
         "title": "Databases & Persistence",
         "skills": [
           "PostgreSQL",
-          "MariaDB / MySQL",
-          "Relational Modeling & Normalization",
-          "Query Optimization"
+          "MariaDB",
+          "MySQL",
+          "SQLite / JDBC",
+          "Relational Design & Normalization",
+          "SQL Query Optimization"
         ]
       },
       {
         "title": "Infrastructure, DevOps & Networks",
         "skills": [
           "Docker (Containers & Volumes)",
-          "Linux / Ubuntu Server",
-          "Cisco Networking Academy",
-          "Git & GitHub"
+          "Linux",
+          "Ubuntu",
+          "Git",
+          "GitHub",
+          "Cisco Networking Academy"
         ]
       },
       {
@@ -102,6 +110,7 @@
           "Systematic problem solving",
           "Clean & maintainable code",
           "Teamwork and clear communication",
+          "Adaptability and organization",
           "Self-directed continuous learning"
         ]
       }
