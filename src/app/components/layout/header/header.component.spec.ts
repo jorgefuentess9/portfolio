@@ -9,6 +9,7 @@ describe('HeaderComponent', () => {
   let state: PortfolioStateService;
 
   beforeEach(async () => {
+    localStorage.clear();
     document.body.classList.remove('light-mode');
 
     await TestBed.configureTestingModule({
@@ -83,6 +84,28 @@ describe('HeaderComponent', () => {
     expect(state.currentTheme()).toBe('light');
     expect(themeBtn.querySelector('.theme-icon--sun')).toBeTruthy();
     expect(document.body.classList.contains('light-mode')).toBe(true);
+  });
+
+  it('should toggle mobile menu and close it when clicking a navigation link', () => {
+    const el = fixture.nativeElement as HTMLElement;
+    const menuBtn = el.querySelector('.mobile-menu-btn') as HTMLButtonElement;
+    const nav = el.querySelector('.nav-links') as HTMLElement;
+    const firstLink = el.querySelector('.nav-link') as HTMLAnchorElement;
+
+    expect(component.mobileMenuOpen()).toBe(false);
+    expect(nav.classList.contains('nav-links--open')).toBe(false);
+
+    menuBtn.click();
+    fixture.detectChanges();
+
+    expect(component.mobileMenuOpen()).toBe(true);
+    expect(nav.classList.contains('nav-links--open')).toBe(true);
+
+    firstLink.click();
+    fixture.detectChanges();
+
+    expect(component.mobileMenuOpen()).toBe(false);
+    expect(nav.classList.contains('nav-links--open')).toBe(false);
   });
 });
 

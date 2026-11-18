@@ -1,14 +1,18 @@
 <header class="site-header">
   <div class="container header-inner">
-    <a href="#" class="brand">
+    <a href="#" class="brand" (click)="closeMobileMenu()">
       <span class="prompt-symbol">~/</span>jorge-fuentes<span class="cursor">_</span>
     </a>
 
-    <nav class="nav-links" aria-label="Navegación principal">
-      <a href="#proyectos" class="nav-link">{{ 'nav.projects' | translate }}</a>
-      <a href="#habilidades" class="nav-link">{{ 'nav.skills' | translate }}</a>
-      <a href="#formacion" class="nav-link">{{ 'nav.education' | translate }}</a>
-      <a href="#contacto" class="nav-link">{{ 'nav.contact' | translate }}</a>
+    <nav
+      class="nav-links"
+      id="primary-navigation"
+      [class.nav-links--open]="mobileMenuOpen()"
+      aria-label="Navegación principal">
+      <a href="#proyectos" class="nav-link" (click)="closeMobileMenu()">{{ 'nav.projects' | translate }}</a>
+      <a href="#habilidades" class="nav-link" (click)="closeMobileMenu()">{{ 'nav.skills' | translate }}</a>
+      <a href="#formacion" class="nav-link" (click)="closeMobileMenu()">{{ 'nav.education' | translate }}</a>
+      <a href="#contacto" class="nav-link" (click)="closeMobileMenu()">{{ 'nav.contact' | translate }}</a>
     </nav>
 
     <div class="header-actions">
@@ -46,6 +50,28 @@
             <line x1="21" y1="12" x2="23" y2="12"/>
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        }
+      </button>
+
+      <!-- Botón Menú Móvil (< 680px) -->
+      <button
+        type="button"
+        class="action-btn mobile-menu-btn"
+        (click)="toggleMobileMenu()"
+        [attr.aria-expanded]="mobileMenuOpen()"
+        aria-controls="primary-navigation"
+        [attr.aria-label]="mobileMenuOpen() ? 'Cerrar menú' : 'Abrir menú'">
+        @if (!mobileMenuOpen()) {
+          <svg class="theme-icon menu-icon--bars" viewBox="0 0 24 24" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        } @else {
+          <svg class="theme-icon menu-icon--close" viewBox="0 0 24 24" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
           </svg>
         }
       </button>

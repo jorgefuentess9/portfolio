@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import { PortfolioStateService } from '../../../services/portfolio-state.service';
 
@@ -11,4 +11,13 @@ import { PortfolioStateService } from '../../../services/portfolio-state.service
 })
 export class HeaderComponent {
   state = inject(PortfolioStateService);
+  mobileMenuOpen = signal(false);
+
+  toggleMobileMenu(): void {
+    this.mobileMenuOpen.update(open => !open);
+  }
+
+  closeMobileMenu(): void {
+    this.mobileMenuOpen.set(false);
+  }
 }
