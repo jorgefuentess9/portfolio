@@ -112,3 +112,10 @@
   font-weight: 700;
   font-size: 1.05rem;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline-content:hover,
+  .timeline-item:hover .timeline-marker {
+    transform: none;
+  }
+}
