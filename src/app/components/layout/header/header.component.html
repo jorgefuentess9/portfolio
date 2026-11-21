@@ -8,7 +8,7 @@
       class="nav-links"
       id="primary-navigation"
       [class.nav-links--open]="mobileMenuOpen()"
-      aria-label="Navegación principal">
+      [attr.aria-label]="'nav.ariaMain' | translate">
       <a href="#proyectos" class="nav-link" (click)="closeMobileMenu()">{{ 'nav.projects' | translate }}</a>
       <a href="#habilidades" class="nav-link" (click)="closeMobileMenu()">{{ 'nav.skills' | translate }}</a>
       <a href="#formacion" class="nav-link" (click)="closeMobileMenu()">{{ 'nav.education' | translate }}</a>
@@ -22,19 +22,20 @@
         class="action-btn lang-btn" 
         (click)="state.toggleLanguage()"
         [attr.aria-label]="'nav.langToggle' | translate"
-        title="Cambiar idioma / Switch language">
+        [title]="'nav.langTitle' | translate">
         <span class="lang-tag" [class.active]="state.currentLang() === 'es'">ES</span>
         <span class="lang-divider">/</span>
         <span class="lang-tag" [class.active]="state.currentLang() === 'en'">EN</span>
       </button>
 
       <!-- Botón Modo Oscuro / Modo Claro -->
+      @let themeActionLabel = (state.currentTheme() === 'dark' ? 'nav.themeToLight' : 'nav.themeToDark') | translate;
       <button 
         type="button" 
         class="action-btn theme-btn" 
         (click)="state.toggleTheme()"
-        [attr.aria-label]="'nav.themeToggle' | translate"
-        [title]="state.currentTheme() === 'dark' ? 'Activar modo claro' : 'Activar modo oscuro'">
+        [attr.aria-label]="themeActionLabel"
+        [title]="themeActionLabel">
         @if (state.currentTheme() === 'dark') {
           <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
@@ -61,7 +62,7 @@
         (click)="toggleMobileMenu()"
         [attr.aria-expanded]="mobileMenuOpen()"
         aria-controls="primary-navigation"
-        [attr.aria-label]="mobileMenuOpen() ? 'Cerrar menú' : 'Abrir menú'">
+        [attr.aria-label]="(mobileMenuOpen() ? 'nav.menuClose' : 'nav.menuOpen') | translate">
         @if (!mobileMenuOpen()) {
           <svg class="theme-icon menu-icon--bars" viewBox="0 0 24 24" aria-hidden="true">
             <line x1="3" y1="6" x2="21" y2="6"/>

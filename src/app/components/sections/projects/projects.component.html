@@ -22,7 +22,7 @@
         <h3 class="project-title">{{ project.title }}</h3>
         <p class="project-desc">{{ project.desc }}</p>
 
-        <ul class="tags" aria-label="Tecnologías">
+        <ul class="tags" [attr.aria-label]="'projects.techLabel' | translate">
           @for (tag of project.tags; track tag) {
             <li class="tag-item">{{ tag }}</li>
           }
@@ -51,11 +51,17 @@
     }
   </div>
 
-  @if (activeNotice) {
+  @if (activeNotice()) {
     <div class="notice-dialog-backdrop" (click)="closeNotice()">
-      <div class="notice-dialog" (click)="$event.stopPropagation()">
-        <p class="notice-msg">{{ activeNotice }}</p>
-        <button type="button" class="btn btn--primary" (click)="closeNotice()">{{ 'projects.gotItBtn' | translate }}</button>
+      <div
+        class="notice-dialog"
+        role="dialog"
+        aria-modal="true"
+        [attr.aria-label]="'projects.noticeLabel' | translate"
+        aria-describedby="project-notice-msg"
+        (click)="$event.stopPropagation()">
+        <p id="project-notice-msg" class="notice-msg">{{ activeNotice() }}</p>
+        <button #noticeCloseBtn type="button" class="btn btn--primary" (click)="closeNotice()">{{ 'projects.gotItBtn' | translate }}</button>
       </div>
     </div>
   }
