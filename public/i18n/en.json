@@ -5,7 +5,6 @@
     "education": "~/education",
     "contact": "~/contact",
     "ariaMain": "Main navigation",
-    "themeToggle": "Toggle theme",
     "themeToLight": "Switch to light mode",
     "themeToDark": "Switch to dark mode",
     "langToggle": "Language",
@@ -80,46 +79,46 @@
       {
         "title": "Languages & Backend",
         "skills": [
-          "Java (OOP, MVC)",
-          "Python & venv",
-          "Odoo ERP",
-          "Angular",
-          "TypeScript",
-          "JavaScript",
-          "HTML5",
-          "CSS3"
+          { "name": "Java (OOP, MVC)", "icon": "java" },
+          { "name": "Python & venv", "icon": "python" },
+          { "name": "Odoo ERP", "icon": "odoo" },
+          { "name": "Angular", "icon": "angular" },
+          { "name": "TypeScript", "icon": "typescript" },
+          { "name": "JavaScript", "icon": "javascript" },
+          { "name": "HTML5", "icon": "html5" },
+          { "name": "CSS3", "icon": "css3" }
         ]
       },
       {
         "title": "Databases & Persistence",
         "skills": [
-          "PostgreSQL",
-          "MariaDB",
-          "MySQL",
-          "SQLite / JDBC",
-          "Relational Design & Normalization",
-          "SQL Query Optimization"
+          { "name": "PostgreSQL", "icon": "postgresql" },
+          { "name": "MariaDB", "icon": "mariadb" },
+          { "name": "MySQL", "icon": "mysql" },
+          { "name": "SQLite / JDBC", "icon": "sqlite" },
+          { "name": "Relational Design & Normalization", "icon": "schema" },
+          { "name": "SQL Query Optimization", "icon": "bolt" }
         ]
       },
       {
         "title": "Infrastructure, DevOps & Networks",
         "skills": [
-          "Docker (Containers & Volumes)",
-          "Linux",
-          "Ubuntu",
-          "Git",
-          "GitHub",
-          "Cisco Networking Academy"
+          { "name": "Docker (Containers & Volumes)", "icon": "docker" },
+          { "name": "Linux", "icon": "linux" },
+          { "name": "Ubuntu", "icon": "ubuntu" },
+          { "name": "Git", "icon": "git" },
+          { "name": "GitHub", "icon": "github" },
+          { "name": "Cisco Networking Academy", "icon": "cisco" }
         ]
       },
       {
         "title": "Professional Competencies",
         "skills": [
-          "Systematic problem solving",
-          "Clean & maintainable code",
-          "Teamwork and clear communication",
-          "Adaptability and organization",
-          "Self-directed continuous learning"
+          { "name": "Systematic problem solving", "icon": "terminal" },
+          { "name": "Clean & maintainable code", "icon": "code" },
+          { "name": "Teamwork and clear communication", "icon": "users" },
+          { "name": "Adaptability and organization", "icon": "layers" },
+          { "name": "Self-directed continuous learning", "icon": "compass" }
         ]
       }
     ]
