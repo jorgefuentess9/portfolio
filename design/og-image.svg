@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="~/jorge-fuentes_ — Estudiante de DAM · Java · PostgreSQL · Docker · Angular — jorgefuentes.dev">
+  <!-- Fondo principal (#0b0f14) -->
+  <rect width="1200" height="630" fill="#0b0f14" />
+
+  <!-- Marco sutil (#21262d) -->
+  <rect
+    x="48"
+    y="48"
+    width="1104"
+    height="534"
+    rx="16"
+    fill="none"
+    stroke="#21262d"
+    stroke-width="2" />
+
+  <!-- Texto principal estilo terminal -->
+  <text
+    x="104"
+    y="264"
+    font-family="Consolas, 'Cascadia Mono', 'SF Mono', Menlo, 'Liberation Mono', 'Courier New', monospace"
+    font-size="84"
+    font-weight="700"
+    letter-spacing="-1.5"><tspan fill="#3fb950">~/</tspan><tspan fill="#e6edf3">jorge-fuentes</tspan><tspan fill="#3fb950">_</tspan></text>
+
+  <!-- Subtítulo (#b1bac4) -->
+  <text
+    x="104"
+    y="340"
+    font-family="'Segoe UI', system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial, sans-serif"
+    font-size="32"
+    font-weight="500"
+    fill="#b1bac4">Estudiante de DAM <tspan fill="#3fb950">·</tspan> Java <tspan fill="#3fb950">·</tspan> PostgreSQL <tspan fill="#3fb950">·</tspan> Docker <tspan fill="#3fb950">·</tspan> Angular</text>
+
+  <!-- Separador sutil (#21262d) -->
+  <line x1="104" y1="448" x2="1096" y2="448" stroke="#21262d" stroke-width="1.5" />
+
+  <!-- Dominio discreto abajo (#8b949e) -->
+  <text
+    x="104"
+    y="504"
+    font-family="Consolas, 'Cascadia Mono', 'SF Mono', Menlo, 'Liberation Mono', 'Courier New', monospace"
+    font-size="25"
+    font-weight="500"
+    fill="#8b949e">jorgefuentes.dev</text>
+</svg>
