@@ -24,8 +24,14 @@ describe('HeaderComponent', () => {
         skills: '~/habilidades',
         education: '~/formación',
         contact: '~/contacto',
+        ariaMain: 'Navegación principal',
         themeToggle: 'Cambiar modo',
-        langToggle: 'Idioma'
+        themeToLight: 'Cambiar a modo claro',
+        themeToDark: 'Cambiar a modo oscuro',
+        langToggle: 'Idioma',
+        langTitle: 'Cambiar idioma',
+        menuOpen: 'Abrir menú',
+        menuClose: 'Cerrar menú'
       }
     });
     translate.setTranslation('en', {
@@ -34,8 +40,14 @@ describe('HeaderComponent', () => {
         skills: '~/skills',
         education: '~/education',
         contact: '~/contact',
+        ariaMain: 'Main navigation',
         themeToggle: 'Toggle theme',
-        langToggle: 'Language'
+        themeToLight: 'Switch to light mode',
+        themeToDark: 'Switch to dark mode',
+        langToggle: 'Language',
+        langTitle: 'Switch language',
+        menuOpen: 'Open menu',
+        menuClose: 'Close menu'
       }
     });
 
@@ -71,12 +83,14 @@ describe('HeaderComponent', () => {
     expect(state.currentLang()).toBe('es');
   });
 
-  it('should toggle theme between dark and light mode', () => {
+  it('should toggle theme between dark and light mode and update action labels', () => {
     const el = fixture.nativeElement as HTMLElement;
     const themeBtn = el.querySelector('.theme-btn') as HTMLButtonElement;
 
     expect(themeBtn.querySelector('.theme-icon--moon')).toBeTruthy();
     expect(document.body.classList.contains('light-mode')).toBe(false);
+    expect(themeBtn.getAttribute('aria-label')).toBe('Cambiar a modo claro');
+    expect(themeBtn.getAttribute('title')).toBe('Cambiar a modo claro');
 
     themeBtn.click();
     fixture.detectChanges();
@@ -84,6 +98,38 @@ describe('HeaderComponent', () => {
     expect(state.currentTheme()).toBe('light');
     expect(themeBtn.querySelector('.theme-icon--sun')).toBeTruthy();
     expect(document.body.classList.contains('light-mode')).toBe(true);
+    expect(themeBtn.getAttribute('aria-label')).toBe('Cambiar a modo oscuro');
+    expect(themeBtn.getAttribute('title')).toBe('Cambiar a modo oscuro');
+  });
+
+  it('should translate navigation, language, theme and mobile menu accessibility attributes', () => {
+    const el = fixture.nativeElement as HTMLElement;
+    const nav = el.querySelector('nav') as HTMLElement;
+    const langBtn = el.querySelector('.lang-btn') as HTMLButtonElement;
+    const themeBtn = el.querySelector('.theme-btn') as HTMLButtonElement;
+    const menuBtn = el.querySelector('.mobile-menu-btn') as HTMLButtonElement;
+
+    expect(nav.getAttribute('aria-label')).toBe('Navegación principal');
+    expect(langBtn.getAttribute('title')).toBe('Cambiar idioma');
+    expect(themeBtn.getAttribute('aria-label')).toBe('Cambiar a modo claro');
+    expect(menuBtn.getAttribute('aria-label')).toBe('Abrir menú');
+
+    langBtn.click();
+    fixture.detectChanges();
+
+    expect(nav.getAttribute('aria-label')).toBe('Main navigation');
+    expect(langBtn.getAttribute('title')).toBe('Switch language');
+    expect(themeBtn.getAttribute('aria-label')).toBe('Switch to light mode');
+    expect(themeBtn.getAttribute('title')).toBe('Switch to light mode');
+    expect(menuBtn.getAttribute('aria-label')).toBe('Open menu');
+
+    themeBtn.click();
+    menuBtn.click();
+    fixture.detectChanges();
+
+    expect(themeBtn.getAttribute('aria-label')).toBe('Switch to dark mode');
+    expect(themeBtn.getAttribute('title')).toBe('Switch to dark mode');
+    expect(menuBtn.getAttribute('aria-label')).toBe('Close menu');
   });
 
   it('should toggle mobile menu and close it when clicking a navigation link', () => {
@@ -94,18 +140,21 @@ describe('HeaderComponent', () => {
 
     expect(component.mobileMenuOpen()).toBe(false);
     expect(nav.classList.contains('nav-links--open')).toBe(false);
+    expect(menuBtn.getAttribute('aria-label')).toBe('Abrir menú');
 
     menuBtn.click();
     fixture.detectChanges();
 
     expect(component.mobileMenuOpen()).toBe(true);
     expect(nav.classList.contains('nav-links--open')).toBe(true);
+    expect(menuBtn.getAttribute('aria-label')).toBe('Cerrar menú');
 
     firstLink.click();
     fixture.detectChanges();
 
     expect(component.mobileMenuOpen()).toBe(false);
     expect(nav.classList.contains('nav-links--open')).toBe(false);
+    expect(menuBtn.getAttribute('aria-label')).toBe('Abrir menú');
   });
 });
 

@@ -55,7 +55,7 @@ portfolio/
 │   │   │   │   └── footer/                  # Pie de página y copyright dinámico
 │   │   │   └── sections/
 │   │   │       ├── hero/                    # Presentación DAM, status badge y enlaces
-│   │   │       ├── projects/                # Grid 2x2 de proyectos con elevación y modal
+│   │   │       ├── projects/                # Grid 2x2 de proyectos con elevación y diálogo accesible de aviso
 │   │   │       ├── skills/                  # Grid 2x2 de habilidades con cajitas, logos SVG y color por tecnología
 │   │   │       ├── education/               # Timeline de formación DAM y cursos Cisco
 │   │   │       └── contact/                 # Formulario de contacto AJAX con Formspree y honeypot

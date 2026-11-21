@@ -4,8 +4,14 @@
     "skills": "~/skills",
     "education": "~/education",
     "contact": "~/contact",
+    "ariaMain": "Main navigation",
     "themeToggle": "Toggle theme",
-    "langToggle": "Language"
+    "themeToLight": "Switch to light mode",
+    "themeToDark": "Switch to dark mode",
+    "langToggle": "Language",
+    "langTitle": "Switch language",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu"
   },
   "hero": {
     "name": "Jorge Fuentes Aguilar",
@@ -23,6 +29,8 @@
     "viewProject": "View project",
     "inProgressBadge": "In development",
     "gotItBtn": "Got it",
+    "techLabel": "Technologies",
+    "noticeLabel": "Project under development notice",
     "items": [
       {
         "id": "viduke-club",

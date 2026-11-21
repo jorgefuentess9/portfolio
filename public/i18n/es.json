@@ -4,8 +4,14 @@
     "skills": "~/habilidades",
     "education": "~/formación",
     "contact": "~/contacto",
+    "ariaMain": "Navegación principal",
     "themeToggle": "Cambiar modo",
-    "langToggle": "Idioma"
+    "themeToLight": "Cambiar a modo claro",
+    "themeToDark": "Cambiar a modo oscuro",
+    "langToggle": "Idioma",
+    "langTitle": "Cambiar idioma",
+    "menuOpen": "Abrir menú",
+    "menuClose": "Cerrar menú"
   },
   "hero": {
     "name": "Jorge Fuentes Aguilar",
@@ -23,6 +29,8 @@
     "viewProject": "Ver proyecto",
     "inProgressBadge": "En desarrollo",
     "gotItBtn": "Entendido",
+    "techLabel": "Tecnologías",
+    "noticeLabel": "Aviso de proyecto en desarrollo",
     "items": [
       {
         "id": "viduke-club",
