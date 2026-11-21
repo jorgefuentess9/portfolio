@@ -54,6 +54,7 @@
 
 .nav-link {
   padding: 0.42rem 0.95rem;
+  border-radius: 25px;
   text-align: center;
   font-family: var(--font-mono);
   font-size: 0.85rem;
@@ -61,33 +62,14 @@
   color: var(--text-soft);
   text-decoration: none;
   white-space: nowrap;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .nav-link:hover,
 .nav-link:focus-visible {
   color: var(--accent);
-  anchor-name: --pill;
-}
-
-.nav-links::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  position-anchor: --pill;
-  inset: anchor(top) anchor(right) anchor(bottom) anchor(left);
   background: var(--accent-bg);
-  border: 1px solid var(--accent-border);
-  box-sizing: border-box;
-  opacity: 0;
-  border-radius: 25px;
-  pointer-events: none;
-  transition: inset 0.4s ease, opacity 0.3s ease;
-}
-
-.nav-links:has(.nav-link:hover)::before,
-.nav-links:has(.nav-link:focus-visible)::before {
-  opacity: 1;
+  box-shadow: inset 0 0 0 1px var(--accent-border);
 }
 
 .header-actions {
@@ -115,33 +97,78 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.25s ease, border-color 0.25s ease;
 }
 
 .action-btn:hover,
 .action-btn:focus-visible {
   color: var(--accent);
-  anchor-name: --action-pill;
-}
-
-.header-actions::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  position-anchor: --action-pill;
-  inset: anchor(top) anchor(right) anchor(bottom) anchor(left);
   background: var(--accent-bg);
-  border: 1px solid var(--accent-border);
-  box-sizing: border-box;
-  opacity: 0;
-  border-radius: 25px;
-  pointer-events: none;
-  transition: inset 0.4s ease, opacity 0.3s ease;
+  border-color: var(--accent-border);
 }
 
-.header-actions:has(.action-btn:hover)::before,
-.header-actions:has(.action-btn:focus-visible)::before {
-  opacity: 1;
+@supports (anchor-name: --x) {
+  .nav-link {
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus-visible {
+    background: transparent;
+    box-shadow: none;
+    anchor-name: --pill;
+  }
+
+  .nav-links::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    position-anchor: --pill;
+    inset: anchor(top) anchor(right) anchor(bottom) anchor(left);
+    background: var(--accent-bg);
+    border: 1px solid var(--accent-border);
+    box-sizing: border-box;
+    opacity: 0;
+    border-radius: 25px;
+    pointer-events: none;
+    transition: inset 0.4s ease, opacity 0.3s ease;
+  }
+
+  .nav-links:has(.nav-link:hover)::before,
+  .nav-links:has(.nav-link:focus-visible)::before {
+    opacity: 1;
+  }
+
+  .action-btn {
+    transition: color 0.3s ease;
+  }
+
+  .action-btn:hover,
+  .action-btn:focus-visible {
+    background: transparent;
+    border-color: transparent;
+    anchor-name: --action-pill;
+  }
+
+  .header-actions::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    position-anchor: --action-pill;
+    inset: anchor(top) anchor(right) anchor(bottom) anchor(left);
+    background: var(--accent-bg);
+    border: 1px solid var(--accent-border);
+    box-sizing: border-box;
+    opacity: 0;
+    border-radius: 25px;
+    pointer-events: none;
+    transition: inset 0.4s ease, opacity 0.3s ease;
+  }
+
+  .header-actions:has(.action-btn:hover)::before,
+  .header-actions:has(.action-btn:focus-visible)::before {
+    opacity: 1;
+  }
 }
 
 .lang-btn {

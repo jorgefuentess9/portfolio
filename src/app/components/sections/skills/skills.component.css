@@ -151,3 +151,10 @@
     grid-column: span 1;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-category-card:hover,
+  .skill-item:hover {
+    transform: none;
+  }
+}
