@@ -126,7 +126,7 @@
   "education": {
     "sectionPrefix": "~/",
     "sectionTitle": "formación",
-    "sectionSubtitle": "Itinerario académico y certificaciones técnicas",
+    "sectionSubtitle": "Itinerario académico, certificaciones y competiciones técnicas",
     "items": [
       {
         "degree": "Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)",
@@ -135,6 +135,15 @@
         "details": [
           "Desarrollo de software multiplataforma, bases de datos relacionales (PostgreSQL, MariaDB, MySQL, SQLite) y sistemas.",
           "Aplicaciones de escritorio y web orientadas a buenas prácticas y código limpio."
+        ]
+      },
+      {
+        "degree": "ASTI Robotics Challenge",
+        "institution": "Fundación ASTI",
+        "period": "Participación",
+        "details": [
+          "Participación en el ASTI Robotics Challenge, competición de robótica para estudiantes impulsada por la Fundación ASTI.",
+          "Trabajo en equipo enfocado en la programación y la resolución de retos técnicos."
         ]
       },
       {

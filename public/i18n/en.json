@@ -126,7 +126,7 @@
   "education": {
     "sectionPrefix": "~/",
     "sectionTitle": "education",
-    "sectionSubtitle": "Academic journey and technical certifications",
+    "sectionSubtitle": "Academic journey, certifications and technical competitions",
     "items": [
       {
         "degree": "Higher Degree in Multiplatform Application Development (DAM)",
@@ -135,6 +135,15 @@
         "details": [
           "Multiplatform software development, relational databases (PostgreSQL, MariaDB, MySQL, SQLite), and operating systems.",
           "Desktop and web applications focused on industry best practices and clean code."
+        ]
+      },
+      {
+        "degree": "ASTI Robotics Challenge",
+        "institution": "Fundación ASTI",
+        "period": "Participation",
+        "details": [
+          "Participation in the ASTI Robotics Challenge, a student robotics competition organized by Fundación ASTI.",
+          "Teamwork focused on programming and solving technical challenges."
         ]
       },
       {

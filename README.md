@@ -57,7 +57,7 @@ portfolio/
 │   │   │       ├── hero/                    # Presentación DAM, status badge y enlaces
 │   │   │       ├── projects/                # Grid 2x2 de proyectos con elevación y diálogo accesible de aviso
 │   │   │       ├── skills/                  # Grid 2x2 de habilidades con cajitas, logos SVG y color por tecnología
-│   │   │       ├── education/               # Timeline de formación DAM y cursos Cisco
+│   │   │       ├── education/               # Timeline de formación DAM, ASTI Robotics Challenge y cursos Cisco
 │   │   │       └── contact/                 # Formulario de contacto AJAX con Formspree y honeypot
 │   │   ├── models/
 │   │   │   ├── project.model.ts             # Interfaz ProjectItem
